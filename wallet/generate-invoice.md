@@ -18,6 +18,10 @@ PostWalletInvoice
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="description\_hash" type="string" required=false %}
+If this is provided, memo will be ignored
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="memo" type="string" required=false %}
 
 {% endapi-method-parameter %}
