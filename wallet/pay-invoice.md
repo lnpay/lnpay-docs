@@ -99,6 +99,6 @@ https://lnpay.co/v1/user/wallet/wa_Opnn4kGOGBMnfCLFXtsDnjTb/withdraw
 {% endtabs %}
 
 {% hint style="danger" %}
-The `Content-Type: application/json` header is required for all `POST` request with a body!
+The `Content-Type: application/json` header is required for all `POST` request with a JSON body!
 {% endhint %}
 

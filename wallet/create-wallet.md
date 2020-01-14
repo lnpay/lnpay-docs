@@ -67,7 +67,7 @@ https://lnpay.co/v1/user/wallet
 {% endtab %}
 {% endtabs %}
 
-{% hint style="info" %}
+{% hint style="warning" %}
 The access keys generated will NOT be available via the API again! You must save and store them
 {% endhint %}
 

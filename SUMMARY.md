@@ -5,6 +5,7 @@
 ## Basics
 
 * [How to Authenticate](basics/how-to-authenticate.md)
+* [Sending Requests](basics/sending-requests.md)
 * [Error Handling](basics/error-handling.md)
 
 ## Wallet
