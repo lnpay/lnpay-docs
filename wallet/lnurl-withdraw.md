@@ -47,10 +47,14 @@ Cake successfully retrieved.
 Note: These LNURLs are ONE-TIME use. This is to prevent repeated access to the wallet.
 {% endhint %}
 
+{% tabs %}
+{% tab title="curl" %}
 ```bash
 $ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 https://lnpay.co/v1/user/wallet/wa_Opnn4kGOGBMnfCLFXtsDnjTb/lnurl/withdraw?num_satoshis=3
 
 # We are using the "admin" access key in this instance as denoted by the "wa_"
 ```
+{% endtab %}
+{% endtabs %}
 

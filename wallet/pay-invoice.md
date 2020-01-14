@@ -84,6 +84,8 @@ Response directly from node if node error
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% tabs %}
+{% tab title="curl" %}
 ```text
 $ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 -H "Content-Type: application/json" \
@@ -93,8 +95,10 @@ https://lnpay.co/v1/user/wallet/wa_Opnn4kGOGBMnfCLFXtsDnjTb/withdraw
 
 # Note we are using the "admin" access_key as denoted by "wa_"
 ```
+{% endtab %}
+{% endtabs %}
 
-{% hint style="info" %}
+{% hint style="danger" %}
 The `Content-Type: application/json` header is required for all `POST` request with a body!
 {% endhint %}
 

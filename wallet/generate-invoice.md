@@ -80,7 +80,7 @@ https://lnpay.co/v1/user/wallet/wi_skllxCQI7yurKi0NCCTc0wwO/invoice
 {% endtab %}
 {% endtabs %}
 
-{% hint style="info" %}
+{% hint style="danger" %}
 The `Content-Type: application/json` header is required for all `POST` request with a body!
 {% endhint %}
 
