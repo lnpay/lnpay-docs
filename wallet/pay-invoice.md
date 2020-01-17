@@ -26,8 +26,8 @@ access key
 
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="lnPayParams" type="object" required=false %}
-Send custom data through
+{% api-method-parameter name="lnPayParams" type="array" required=false %}
+JSON array of custom data to pass thru
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -42,9 +42,13 @@ Payment successfully executed
 {
     "id":"wtx_JOhQFFI826owtE51AfFC975c",
     "created_at":1577657602,
-    "updated_at":1577657602,
     "wallet_id":"w_hkjS9r6mTYeABc",
-    "wtx_type_id":20,
+    "wtxType": {
+        "id": 20,
+        "layer": "ln",
+        "name": "ln_withdrawal",
+        "display_name": "LN Withdrawal"
+    },
     "num_satoshis":-5,
     "user_label":"Test invoice for docs",
     "lnTx":{

@@ -1,3 +1,7 @@
+---
+description: This documentation uses a JSON body as the default.
+---
+
 # Sending Requests
 
 ## Request Formats
