@@ -50,7 +50,7 @@ https://lnpay.co/v1/user/wallets
 
 # NOTE: you must base64 encode yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: when using raw authentication header
 
-$ curl --header 'Authorization: Basic eWcyME8waVVNeGs4a0tfcVV6a1Q0WUtGdnAxWnNVdHA6' \
+$ curl -H 'Authorization: Basic eWcyME8waVVNeGs4a0tfcVV6a1Q0WUtGdnAxWnNVdHA6' \
 https://lnpay.co/v1/user/wallets
 ```
 {% endtab %}
