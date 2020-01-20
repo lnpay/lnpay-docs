@@ -42,10 +42,16 @@ Basic authentication is also supported
 {% tabs %}
 {% tab title="curl" %}
 ```text
+# NOTE: the colon below prevents curl from asking for password
+
 $ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 https://lnpay.co/v1/user/wallets
 
-# The colon prevents curl from asking for a password.
+
+# NOTE: you must base64 encode yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: when using raw authentication header
+
+$ curl --header 'Authorization: Basic eWcyME8waVVNeGs4a0tfcVV6a1Q0WUtGdnAxWnNVdHA6' \
+https://lnpay.co/v1/user/wallets
 ```
 {% endtab %}
 {% endtabs %}
