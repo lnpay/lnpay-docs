@@ -4,7 +4,7 @@ description: Generate an LN invoice from the specified wallet
 
 # Pay Invoice
 
-{% api-method method="post" host="https://lnpay.co/v1/user/wallet/" path=":access\_key/withdraw" %}
+{% api-method method="post" host="https://lnpay.co/v1/wallet/" path=":access\_key/withdraw" %}
 {% api-method-summary %}
 PostWalletSend
 {% endapi-method-summary %}
@@ -95,7 +95,7 @@ $ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"payment_request":"lnbc50n1p0qjf84p..."}' \
-https://lnpay.co/v1/user/wallet/wa_Opnn4kGOGBMnfCLFXtsDnjTb/withdraw
+https://lnpay.co/v1/wallet/wa_Opnn4kGOGBMnfCLFXtsDnjTb/withdraw
 
 # Note we are using the "admin" access_key as denoted by "wa_"
 ```

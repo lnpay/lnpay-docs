@@ -4,7 +4,7 @@ description: This section describes how to transfer sats between wallets within 
 
 # Transfers Between Wallets
 
-{% api-method method="post" host="https://lnpay.co/v1/user/wallet" path="/:access\_key/transfer" %}
+{% api-method method="post" host="https://lnpay.co/v1/wallet" path="/:access\_key/transfer" %}
 {% api-method-summary %}
 PostWalletTransfer
 {% endapi-method-summary %}
@@ -106,7 +106,7 @@ $ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"dest_wallet_id":"w_n743yizWqe43Oz","num_satoshis":1,"memo":"Test transfer"}' \
-https://lnpay.co/v1/user/wallet/wa_Opnn4kGOGBMnfCLFXtsDnjTb/transfer
+https://lnpay.co/v1/wallet/wa_Opnn4kGOGBMnfCLFXtsDnjTb/transfer
 ```
 {% endtab %}
 {% endtabs %}

@@ -6,7 +6,7 @@ description: >-
 
 # Retrieve a Transaction
 
-{% api-method method="get" host="https://lnpay.co" path="/v1/user/lntx/:lntx\_id" %}
+{% api-method method="get" host="https://lnpay.co" path="/v1/lntx/:lntx\_id" %}
 {% api-method-summary %}
 GetLnTxObject
 {% endapi-method-summary %}
@@ -56,8 +56,19 @@ The LnTx Object
 {% tab title="curl" %}
 ```text
 $ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
-https://lnpay.co/v1/user/lntx/lntx_82yveCX2Wn0EkkdyzvyBv
+https://lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv
 ```
 {% endtab %}
 {% endtabs %}
+
+{% hint style="success" %}
+Slim down the response size by appending the fields you want as query parameters
+
+```text
+$ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+https://lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv?fields=settled,num_satoshis
+```
+{% endhint %}
+
+
 

@@ -46,7 +46,7 @@ By default the objects are returned with all fields. You can limit the response 
 {% tab title="curl" %}
 ```text
 $ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
-https://lnpay.co/v1/user/lntx/lntx_82yveCX2Wn0EkkdyzvyBv?fields=num_satoshis,settled
+https://lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv?fields=num_satoshis,settled
 
 //Response
 
