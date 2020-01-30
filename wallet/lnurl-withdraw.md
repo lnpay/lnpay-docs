@@ -1,6 +1,6 @@
 # LNURL Withdraw
 
-{% api-method method="get" host="https://lnpay.co/v1/wallet" path="/:access\_key/lnurl/withdraw" %}
+{% api-method method="get" host="https://lnpay.co/v1/wallet" path="/:wallet\_access\_key/lnurl/withdraw" %}
 {% api-method-summary %}
 GetWalletLnurlWithdraw
 {% endapi-method-summary %}
@@ -12,7 +12,7 @@ Generate an LNURL-withdraw link.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="access\_key" type="string" required=true %}
+{% api-method-parameter name="wallet\_access\_key" type="string" required=true %}
 access\_key with admin permission
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -29,13 +29,12 @@ If blank max wallet balance is used
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Cake successfully retrieved.
+LNURL generated
 {% endapi-method-response-example-description %}
 
 ```text
 {
-    "lnurl":"LNURL1DP68GURN8GHJ7MRWWPSHJTNRDUHHVVF0W4EK2U30WASKCMR9WSHHWC2LFACXUM35DDR5736ZF4HXVS6VGEV8GU6YDE49GC30D3H82UNV94C8YMMRV4EHX0M0W36R66MGD95KS4JGFADRS4ZRFEXK2SN2FFUXUSMHFA98XDZ8D3T9SDECWVHR43",
-    "num_satoshis":15
+    "lnurl":"LNURL1DP68GURN8GHJ7MRWWPSHJTNRDUHHVVF0W4EK2U30WASKCMR9WSHHWC2LFACXUM35DDR5736ZF4HXVS6VGEV8GU6YDE49GC30D3H82UNV94C8YMMRV4EHX0M0W36R66MGD95KS4JGFADRS4ZRFEXK2SN2FFUXUSMHFA98XDZ8D3T9SDECWVHR43"
 }
 ```
 {% endapi-method-response-example %}
