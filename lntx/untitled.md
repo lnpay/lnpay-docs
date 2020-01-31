@@ -1,3 +1,10 @@
+---
+description: >-
+  The LnTx object is basically an object wrapper for an LN invoice. The LnTx
+  endpoint will be called to check status of invoices (settled) and other
+  details.
+---
+
 # The LnTx Object
 
 #### Response
