@@ -4,7 +4,7 @@ description: This section describes how to transfer sats between wallets within 
 
 # Transfers Between Wallets
 
-{% api-method method="post" host="https://lnpay.co/v1/wallet" path="/:wallet\_access\_key/transfer" %}
+{% api-method method="post" host="https://lnpay.co/v1/wallet" path="/:access\_key/transfer" %}
 {% api-method-summary %}
 PostWalletTransfer
 {% endapi-method-summary %}
@@ -16,14 +16,14 @@ Transfer satoshis from source wallet to destination wallet
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="wallet\_access\_key" type="string" required=true %}
+{% api-method-parameter name="access\_key" type="string" required=true %}
 Source wallet key for the transfer. Must be admin key
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="dest\_wallet\_id" type="string" required=true %}
-destination wallet access key \(WAK\) or wallet\_id
+destination wallet key
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="num\_satoshis" type="number" required=true %}

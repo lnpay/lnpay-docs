@@ -1,6 +1,6 @@
 # Generate Invoice
 
-{% api-method method="post" host="https://lnpay.co/v1/wallet/" path=":wallet\_access\_key/invoice" %}
+{% api-method method="post" host="https://lnpay.co/v1/wallet/" path=":access\_key/invoice" %}
 {% api-method-summary %}
 PostWalletInvoice
 {% endapi-method-summary %}
@@ -12,7 +12,7 @@ PostWalletInvoice
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="wallet\_access\_key" type="string" required=true %}
+{% api-method-parameter name="access\_key" type="string" required=true %}
 
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}

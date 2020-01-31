@@ -1,10 +1,10 @@
 ---
 description: >-
-  Retrieve a LN transaction (invoice). This is usually used to see if a
-  transaction has been settled or not, and for how much
+  Retrieve a transaction. This is usually used to see if a transaction has been
+  settled or not, and for how much
 ---
 
-# Get Invoice Status
+# Retrieve a Transaction
 
 {% api-method method="get" host="https://lnpay.co" path="/v1/lntx/:lntx\_id" %}
 {% api-method-summary %}

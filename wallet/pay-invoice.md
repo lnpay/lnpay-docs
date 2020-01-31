@@ -16,7 +16,7 @@ Pay an invoice from this wallet
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="wallet\_access\_key" type="string" required=true %}
+{% api-method-parameter name="access\_key" type="string" required=true %}
 access key
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}

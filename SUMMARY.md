@@ -21,5 +21,5 @@
 ## LNTX
 
 * [The LnTx Object](lntx/untitled.md)
-* [Get Invoice Status](lntx/get-invoice-status.md)
+* [Get Invoice Status](lntx/retrieve-a-transaction.md)
 

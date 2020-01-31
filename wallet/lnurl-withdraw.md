@@ -18,7 +18,11 @@ access\_key with admin permission
 {% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="num\_satoshis" type="string" required=false %}
+{% api-method-parameter name="memo" type="string" required=false %}
+memo for the invoice
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="num\_satoshis" type="integer" required=false %}
 Max number of satoshis this LNURL is good for.   
   
 If blank max wallet balance is used
