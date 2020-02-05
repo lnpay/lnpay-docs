@@ -1,5 +1,8 @@
 ---
-description: Get a list of wallet transactions
+description: >-
+  Get a list of wallet transactions that have been SETTLED. This includes only
+  transactions that have an impact on wallet balance. These DO NOT include
+  unsettled/unpaid invoices.
 ---
 
 # Get Transactions
@@ -10,7 +13,7 @@ GetWalletTransactions
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to retrieve an array of wallet transactions
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
