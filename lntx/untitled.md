@@ -5,7 +5,7 @@ description: >-
   details.
 ---
 
-# The LnTx Object
+# LnTx \(Lightning Invoice\) Object
 
 #### Response
 

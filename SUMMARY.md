@@ -19,8 +19,8 @@
 * [Transfers Between Wallets](wallet/transfers-between-wallets.md)
 * [LNURL Withdraw](wallet/lnurl-withdraw.md)
 
-## LNTX
+## LNTX \(LN Invoice\) <a id="lntx"></a>
 
-* [The LnTx Object](lntx/untitled.md)
+* [LnTx \(Lightning Invoice\) Object](lntx/untitled.md)
 * [Get Invoice Status](lntx/retrieve-a-transaction.md)
 
