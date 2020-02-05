@@ -12,6 +12,7 @@
 
 * [The Wallet Object](wallet/the-wallet-object.md)
 * [Create Wallet](wallet/create-wallet.md)
+* [Get Transactions](wallet/get-transactions.md)
 * [Get Balance](wallet/get-balance.md)
 * [Generate Invoice](wallet/generate-invoice.md)
 * [Pay Invoice](wallet/pay-invoice.md)
