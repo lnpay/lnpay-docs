@@ -66,8 +66,16 @@ Array of transactions successfully retrieved, sorted by time created descending
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% hint style="info" %}
+the `lntx` field will be `null` if the transaction is a transfer
+{% endhint %}
+
+{% tabs %}
+{% tab title="curl" %}
 ```text
 $ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 https://lnpay.co/v1/wallet/wr_3YgsKHplFSyhzBKNVr8tohO/transactions
 ```
+{% endtab %}
+{% endtabs %}
 
