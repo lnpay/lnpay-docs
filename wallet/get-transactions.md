@@ -76,8 +76,22 @@ the `lntx` field will be `null` if the transaction is a transfer
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 https://lnpay.co/v1/wallet/wr_3YgsKHplFSyhzBKNVr8tohO/transactions
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
+
+let myWallet = new LNPayWallet(walletAccessKey);
+let queryParams = {};
+myWallet.getTransactions(queryParams,
+    function(result) {
+      console.log(result);
+    }
+);
 ```
 {% endtab %}
 {% endtabs %}

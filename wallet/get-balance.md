@@ -4,7 +4,7 @@ description: Get the wallet object which includes current balance
 
 # Get Balance
 
-{% api-method method="get" host="https://lnpay.co/v1/wallet/" path=":access\_key" %}
+{% api-method method="get" host="https://lnpay.co/v1/wallet/" path=":wallet\_access\_key" %}
 {% api-method-summary %}
 GetWallet
 {% endapi-method-summary %}
@@ -16,8 +16,8 @@ Returns info about the wallet, including balance
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="access\_key" type="string" required=true %}
-wallet access key
+{% api-method-parameter name="wallet\_access\_key" type="string" required=true %}
+Wallet Access Key \(WAK\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
@@ -51,10 +51,22 @@ wallet access key
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 https://lnpay.co/v1/wallet/wr_3YgsKHplFSyhzBKNVr8tohO
 
 # We are using the "read" access key in this instance as denoted by the "wr_"
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
+
+let myWallet = new LNPayWallet(walletAccessKey);
+myWallet.getInfo(function(result) {
+      console.log('Balance:' + result.balance);
+    }
+);
 ```
 {% endtab %}
 {% endtabs %}

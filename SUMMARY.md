@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Overview](README.md)
+* [Getting Started](README.md)
 
 ## Basics
 
@@ -22,5 +22,5 @@
 ## LNTX \(LN Invoice\) <a id="lntx"></a>
 
 * [LnTx \(Lightning Invoice\) Object](lntx/untitled.md)
-* [Get Invoice Status](lntx/retrieve-a-transaction.md)
+* [Get Invoice Status](lntx/get-invoice-status.md)
 

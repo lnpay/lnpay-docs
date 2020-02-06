@@ -58,11 +58,24 @@ Wallet Created
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"user_label":"Tester API Wallet"}' \
 https://lnpay.co/v1/wallet
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
+
+let walletParams = {"user_label":"My wallet"};
+LNPay.createWallet(walletParams,
+    function(result) {
+      console.log(result);
+    }
+);
 ```
 {% endtab %}
 {% endtabs %}

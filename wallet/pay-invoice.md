@@ -16,7 +16,7 @@ Pay an invoice from this wallet
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="access\_key" type="string" required=true %}
+{% api-method-parameter name="wallet\_access\_key" type="string" required=true %}
 access key
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -91,13 +91,27 @@ Response directly from node if node error
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"payment_request":"lnbc50n1p0qjf84p..."}' \
 https://lnpay.co/v1/wallet/wa_Opnn4kGOGBMnfCLFXtsDnjTb/withdraw
 
 # Note we are using the "admin" access_key as denoted by "wa_"
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
+
+let myWallet = new LNPayWallet(walletAccessKey);
+let invoiceParams = {"payment_request":"lnbc1111..."};
+myWallet.payInvoice(invoiceParams,
+    function(result) {
+      console.log(result);
+    }
+);
 ```
 {% endtab %}
 {% endtabs %}

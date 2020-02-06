@@ -1,6 +1,6 @@
 # Generate Invoice
 
-{% api-method method="post" host="https://lnpay.co/v1/wallet/" path=":access\_key/invoice" %}
+{% api-method method="post" host="https://lnpay.co/v1/wallet/" path=":wallet\_access\_key/invoice" %}
 {% api-method-summary %}
 PostWalletInvoice
 {% endapi-method-summary %}
@@ -12,7 +12,7 @@ PostWalletInvoice
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="access\_key" type="string" required=true %}
+{% api-method-parameter name="wallet\_access\_key" type="string" required=true %}
 
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -69,13 +69,27 @@ This returns an LnTx object
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"num_satoshis":20, "memo":"Test invoice from the docs"}' \
 https://lnpay.co/v1/wallet/wi_skllxCQI7yurKi0NCCTc0wwO/invoice
 
 # Note we are using the "invoice" access_key as denoted by "wi_"
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
+
+let myWallet = new LNPayWallet(walletAccessKey);
+let invoiceParams = {"num_satoshis":2,"memo":"Tester"};
+myWallet.createInvoice(invoiceParams,
+    function(result) {
+      console.log(result);
+    }
+);
 ```
 {% endtab %}
 {% endtabs %}

@@ -1,10 +1,10 @@
 ---
 description: >-
-  Retrieve a transaction. This is usually used to see if a transaction has been
-  settled or not, and for how much
+  Retrieve a LN transaction (invoice). This is usually used to see if a
+  transaction has been settled or not, and for how much
 ---
 
-# Retrieve a Transaction
+# Get Invoice Status
 
 {% api-method method="get" host="https://lnpay.co" path="/v1/lntx/:lntx\_id" %}
 {% api-method-summary %}
@@ -55,8 +55,21 @@ The LnTx Object
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 https://lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
+
+let lntx_id = "lntx_Mxxxxx";
+let lntx = new LNPayLnTx(lntx_id);
+lntx.getInfo(function(result) {
+    console.log("Is Settled" + result.settled);
+  }
+);
 ```
 {% endtab %}
 {% endtabs %}
@@ -65,7 +78,7 @@ https://lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv
 Slim down the response size by appending the fields you want as query parameters
 
 ```text
-$ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 https://lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv?fields=settled,num_satoshis
 ```
 {% endhint %}

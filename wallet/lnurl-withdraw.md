@@ -53,10 +53,24 @@ Note: These LNURLs are ONE-TIME use. This is to prevent repeated access to the w
 {% tabs %}
 {% tab title="curl" %}
 ```bash
-$ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 https://lnpay.co/v1/wallet/wa_Opnn4kGOGBMnfCLFXtsDnjTb/lnurl/withdraw?num_satoshis=3
 
 # We are using the "admin" access key in this instance as denoted by the "wa_"
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
+
+let lnurlParams = {"num_satoshis":12,"memo":"SatsBack!"};
+let myWallet = new LNPayWallet(walletAccessKey);
+myWallet.getLnurl(lnurlParams,
+    function(result) {
+      console.log(result);
+    }
+);
 ```
 {% endtab %}
 {% endtabs %}

@@ -4,7 +4,7 @@ description: This section describes how to transfer sats between wallets within 
 
 # Transfers Between Wallets
 
-{% api-method method="post" host="https://lnpay.co/v1/wallet" path="/:access\_key/transfer" %}
+{% api-method method="post" host="https://lnpay.co/v1/wallet" path="/:wallet\_access\_key/transfer" %}
 {% api-method-summary %}
 PostWalletTransfer
 {% endapi-method-summary %}
@@ -16,14 +16,14 @@ Transfer satoshis from source wallet to destination wallet
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="access\_key" type="string" required=true %}
+{% api-method-parameter name="wallet\_access\_key" type="string" required=true %}
 Source wallet key for the transfer. Must be admin key
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="dest\_wallet\_id" type="string" required=true %}
-destination wallet key
+destination wallet access key \(WAK\) or wallet\_id
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="num\_satoshis" type="number" required=true %}
@@ -102,11 +102,25 @@ Error reported
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"dest_wallet_id":"w_n743yizWqe43Oz","num_satoshis":1,"memo":"Test transfer"}' \
 https://lnpay.co/v1/wallet/wa_Opnn4kGOGBMnfCLFXtsDnjTb/transfer
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
+
+let myWallet = new LNPayWallet(walletAccessKey);
+let transferParams = {"dest_wallet_id":"wa_xxxxx","num_satoshis":22,"memo":"Transfer Memo"};
+myWallet.internalTransfer(transferParams,
+    function(result) {
+      console.log(result);
+    }
+);
 ```
 {% endtab %}
 {% endtabs %}
