@@ -83,13 +83,28 @@ https://lnpay.co/v1/wallet/wi_skllxCQI7yurKi0NCCTc0wwO/invoice
 ```javascript
 LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
 
-let myWallet = new LNPayWallet(walletAccessKey);
+let myWallet = new LNPayWallet('wi_skllxCQI7yurKi0NCCTc0wwO');
 let invoiceParams = {"num_satoshis":2,"memo":"Tester"};
 myWallet.createInvoice(invoiceParams,
     function(result) {
       console.log(result);
     }
 );
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+lnpay_py.initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp')
+from lnpay_py.wallet import LNPayWallet
+
+my_wallet = LNPayWallet('wi_skllxCQI7yurKi0NCCTc0wwO')
+invoice_params = {
+    'num_satoshis': 2,
+    'memo': 'Tester'
+}
+invoice = my_wallet.create_invoice(invoice_params)
+print(invoice)
 ```
 {% endtab %}
 {% endtabs %}

@@ -78,6 +78,18 @@ LNPay.createWallet(walletParams,
 );
 ```
 {% endtab %}
+
+{% tab title="Python" %}
+```python
+lnpay_py.initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp')
+
+wallet_params = {
+    'user_label': 'My wallet'
+}
+new_wallet = lnpay_py.create_wallet(wallet_params)
+print(new_wallet)
+```
+{% endtab %}
 {% endtabs %}
 
 {% hint style="warning" %}

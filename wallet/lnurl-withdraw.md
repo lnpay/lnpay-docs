@@ -65,12 +65,27 @@ https://lnpay.co/v1/wallet/wa_Opnn4kGOGBMnfCLFXtsDnjTb/lnurl/withdraw?num_satosh
 LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
 
 let lnurlParams = {"num_satoshis":12,"memo":"SatsBack!"};
-let myWallet = new LNPayWallet(walletAccessKey);
+let myWallet = new LNPayWallet('wa_Opnn4kGOGBMnfCLFXtsDnjTb');
 myWallet.getLnurl(lnurlParams,
     function(result) {
       console.log(result);
     }
 );
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+lnpay_py.initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp')
+from lnpay_py.wallet import LNPayWallet
+
+my_wallet = LNPayWallet('wa_Opnn4kGOGBMnfCLFXtsDnjTb')
+lnurl_params = {
+    'num_satoshis': 1,
+    'memo': 'SatsBack!'
+}
+lnurl_link = my_wallet.get_lnurl(lnurl_params)
+print(lnurl_link)
 ```
 {% endtab %}
 {% endtabs %}

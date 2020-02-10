@@ -64,12 +64,24 @@ https://lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv
 ```javascript
 LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
 
-let lntx_id = "lntx_Mxxxxx";
+let lntx_id = "lntx_82yveCX2Wn0EkkdyzvyBv";
 let lntx = new LNPayLnTx(lntx_id);
 lntx.getInfo(function(result) {
     console.log("Is Settled" + result.settled);
   }
 );
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+lnpay_py.initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp')
+from lnpay_py.wallet import LNPayWallet
+
+lntx_id = 'lntx_82yveCX2Wn0EkkdyzvyBv'
+ln_tx = LNPayLnTx(lntx_id)
+invoice_result = ln_tx.get_info()
+print(invoice_result)
 ```
 {% endtab %}
 {% endtabs %}

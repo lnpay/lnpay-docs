@@ -114,13 +114,29 @@ https://lnpay.co/v1/wallet/wa_Opnn4kGOGBMnfCLFXtsDnjTb/transfer
 ```javascript
 LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
 
-let myWallet = new LNPayWallet(walletAccessKey);
+let myWallet = new LNPayWallet('wa_Opnn4kGOGBMnfCLFXtsDnjTb');
 let transferParams = {"dest_wallet_id":"wa_xxxxx","num_satoshis":22,"memo":"Transfer Memo"};
 myWallet.internalTransfer(transferParams,
     function(result) {
       console.log(result);
     }
 );
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+lnpay_py.initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp')
+from lnpay_py.wallet import LNPayWallet
+
+my_wallet = LNPayWallet('wa_Opnn4kGOGBMnfCLFXtsDnjTb')
+transfer_params = {
+    'dest_wallet_id': 'w_XXX',
+    'num_satoshis': 1,
+    'memo': 'Transfer Memo'
+}
+transfer_result = my_wallet.internal_transfer(transfer_params)
+print(transfer_result)
 ```
 {% endtab %}
 {% endtabs %}

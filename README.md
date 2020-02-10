@@ -24,6 +24,14 @@ The libraries below are wrappers to help you work with the LNPay API. How to ins
 npm install lnpay-js --save
 ```
 {% endtab %}
+
+{% tab title="Python" %}
+[https://github.com/lnpay/lnpay-py](https://github.com/lnpay/lnpay-py)
+
+```
+pip install lnpay-py
+```
+{% endtab %}
 {% endtabs %}
 
 ## Initializing the SDK
@@ -40,6 +48,15 @@ LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
 ```javascript
 //Use your Public API Key found  - this one here is presented as test
 LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```
+import lnpay_py
+
+# init lnpay
+lnpay_py.initialize(lnpay_api_key)
 ```
 {% endtab %}
 {% endtabs %}

@@ -94,5 +94,16 @@ myWallet.getTransactions(queryParams,
 );
 ```
 {% endtab %}
+
+{% tab title="Python" %}
+```python
+lnpay_py.initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp')
+from lnpay_py.wallet import LNPayWallet
+
+my_wallet = LNPayWallet('wi_skllxCQI7yurKi0NCCTc0wwO')
+transactions = my_wallet.get_transactions()
+print(transactions)
+```
+{% endtab %}
 {% endtabs %}
 

@@ -105,13 +105,27 @@ https://lnpay.co/v1/wallet/wa_Opnn4kGOGBMnfCLFXtsDnjTb/withdraw
 ```javascript
 LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
 
-let myWallet = new LNPayWallet(walletAccessKey);
+let myWallet = new LNPayWallet('wa_Opnn4kGOGBMnfCLFXtsDnjTb');
 let invoiceParams = {"payment_request":"lnbc1111..."};
 myWallet.payInvoice(invoiceParams,
     function(result) {
       console.log(result);
     }
 );
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+lnpay_py.initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp')
+from lnpay_py.wallet import LNPayWallet
+
+my_wallet = LNPayWallet('wa_Opnn4kGOGBMnfCLFXtsDnjTb')
+invoice_params = {
+    'payment_request': 'lnbc....'
+}
+pay_result = my_wallet.pay_invoice(invoice_params)
+print(pay_result)
 ```
 {% endtab %}
 {% endtabs %}

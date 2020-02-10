@@ -62,11 +62,21 @@ https://lnpay.co/v1/wallet/wr_3YgsKHplFSyhzBKNVr8tohO
 ```javascript
 LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
 
-let myWallet = new LNPayWallet(walletAccessKey);
+let myWallet = new LNPayWallet('wr_3YgsKHplFSyhzBKNVr8tohO');
 myWallet.getInfo(function(result) {
       console.log('Balance:' + result.balance);
     }
 );
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+lnpay_py.initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp')
+my_wallet = LNPayWallet('wr_3YgsKHplFSyhzBKNVr8tohO')
+
+info = my_wallet.get_info()
+print(info)
 ```
 {% endtab %}
 {% endtabs %}

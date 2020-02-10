@@ -13,7 +13,7 @@ If no `Content-Type` is specified, the request will be interpreted as Form Data.
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 -X POST \
 -d num_satoshis=20 \
 -d memo="Test invoice from the docs" \
@@ -29,7 +29,7 @@ JSON requests **MUST** contain the `Content-Type: application/json` header. Exam
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"num_satoshis":20, "memo":"Test invoice from the docs"}' \
@@ -45,7 +45,7 @@ By default the objects are returned with all fields. You can limit the response 
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u yg20O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 https://lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv?fields=num_satoshis,settled
 
 //Response
