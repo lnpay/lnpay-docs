@@ -24,3 +24,7 @@
 * [LnTx \(Lightning Invoice\) Object](lntx/untitled.md)
 * [Get Invoice Status](lntx/get-invoice-status.md)
 
+## Node
+
+* [Decode Invoice](node/decode-invoice.md)
+
