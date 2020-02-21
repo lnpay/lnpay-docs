@@ -32,6 +32,8 @@ Array of transactions successfully retrieved, sorted by time created descending
 {% endapi-method-response-example-description %}
 
 ```
+# WalletTransaction objects
+
 [
     {
         "id": "wtx_OXWNFNYYY0NsGLwLx7AtcPM",

@@ -4,7 +4,7 @@ description: Decode an invoice and get route hints. Uses LNPay.co node
 
 # Decode Invoice
 
-{% api-method method="get" host="https://api.cakes.com" path="/v1/node/default/payments/decodeinvoice" %}
+{% api-method method="get" host="https://lnpay.co" path="/v1/node/default/payments/decodeinvoice" %}
 {% api-method-summary %}
 DecodeInvoice
 {% endapi-method-summary %}

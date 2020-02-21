@@ -48,33 +48,62 @@ Transfer executed
 
 ```
 {
-    "wtx_transfer_in":{
-        "id":"wtx_aM9r4YEUrwohStWaxW7lDpRs",
-        "created_at":1579269413,
-        "wallet_id":"w_n743yizWqe43Oz",
-        "num_satoshis":1,
-        "user_label":"Test transfer",
-        "lnTx":null,
-        "wtxType":{
-            "id":30,
-            "layer":"ln",
-            "name":"ln_transfer_in",
-            "display_name":"Transfer In"
+    "wtx_transfer_in": {
+        "id": "wtx_D2MOU88MTPpOytfdflCoGSs8",
+        "created_at": 1582297599,
+        "num_satoshis": 1,
+        "user_label": "Test transfer from Postman Collection",
+        "wallet": {
+            "id": "w_n743yizWqe43Oz",
+            "created_at": 1579001314,
+            "updated_at": 1582297599,
+            "user_label": "Paywall Wallet",
+            "balance": 4,
+            "statusType": {
+                "type": "wallet",
+                "name": "active",
+                "display_name": "Active"
+            }
+        },
+        "walletTransactionType": {
+            "layer": "ln",
+            "name": "ln_transfer_in",
+            "display_name": "Transfer In"
+        },
+        "lnTx": null,
+        "passThru": {
+            "lnPayParams": null,
+            "dest_wallet_id": "w_n743yizWqe43Oz",
+            "source_wallet_id": "w_hkjS9r6mTYeABc"
         }
-    }
-},
-    "wtx_transfer_out":{
-        "id":"wtx_S9okrFLSS9LR97fWkdDfJ6U",
-        "created_at":1579269412,
-        "wallet_id":"w_hkjS9r6mTYeABc",
-        "num_satoshis":-1,
-        "user_label":"Test transfer",
-        "lnTx":null,
-        "wtxType":{
-            "id":40,
-            "layer":"ln",
-            "name":"ln_transfer_out",
-            "display_name":"Transfer Out"
+    },
+    "wtx_transfer_out": {
+        "id": "wtx_LiAIfLI6x1T9sepE80aMYnlw",
+        "created_at": 1582297599,
+        "num_satoshis": -1,
+        "user_label": "Test transfer from Postman Collection",
+        "wallet": {
+            "id": "w_hkjS9r6mTYeABc",
+            "created_at": 1577654988,
+            "updated_at": 1582297599,
+            "user_label": "DEFAULT WALLET",
+            "balance": 2,
+            "statusType": {
+                "type": "wallet",
+                "name": "active",
+                "display_name": "Active"
+            }
+        },
+        "walletTransactionType": {
+            "layer": "ln",
+            "name": "ln_transfer_out",
+            "display_name": "Transfer Out"
+        },
+        "lnTx": null,
+        "passThru": {
+            "lnPayParams": null,
+            "dest_wallet_id": "w_n743yizWqe43Oz",
+            "source_wallet_id": "w_hkjS9r6mTYeABc"
         }
     }
 }

@@ -5,26 +5,27 @@ description: >-
   details.
 ---
 
-# The LnTx Object
+# LnTx \(Lightning Invoice\) Object
 
 #### Response
 
 ```text
 {
-  "id": "lntx_IaWG3yS6FB3ZQJDRjXkkkkk",
-  "created_at": 1577600922,
-  "updated_at": 1577600922,
-  "dest_pubkey": "033868c219bdb51a33560d854d500fe7d3898a1ad9e05dd89d0007e11313588500",
-  "payment_request": "lnbc10n1pw7l9l3pp5pr2sr8pdt2yjm04am0wktr7cphkt8c3gtlvq8qlgaqw9jsh3d6qsdpj2pshjampd3kzunrfde4jq3npw43k2ap6ypgx7mmjgesh2cm9wscqzpgxqrrss4z9zac6gtpskjkhtdsxjd0m4are599k4ya9al0ktqqf7y70xqt5xs3as53va424nsh2dxumdln3ymm2048550hrj5sw8nw2ajzc9p9l3s97",
-  "r_hash_decoded": "f646ff04116d16b7a70e953034b1c7c475c771847eb43e66892039ff5589863b",
-  "description_hash": null,
-  "memo": "This is a memo",
-  "num_satoshis": 11,
-  "expiry": 86400,
-  "expires_at": 1578992143,
-  "payment_preimage": "71566c546f304e70507a486b7561356177426a7535716345713670482f45582b4e4262337a654mmmmm6d673d",
-  "settled": 1,
-  "settled_at": 1575992143
+    "id": "lntx_UlXwgqNd2tl41ZrnWPlx7s6w",
+    "created_at": 1582297054,
+    "dest_pubkey": "033868c219bdb51a33560d854d500fe7d3898a1ad9e05dd89d0007e11313588500",
+    "payment_request": "lnbc200n1p0ylm77pp5384pxkzd5m536nluwf2364r2qmsnh7kzyj0wrv3urze5vllmfmxqdp623jhxapqd9h8vmmfvdjjqenjdakjq5r0wd6x6ctwyppk7mrvv43hg6t0dccqzpgxqyz5vqsp56f338cr57djg5zsagrnxd80krpnqny0k3wldk5ctruwgftk9stnq9qy9qsqju8kfgplphd0jum5z8xs4fdjrv2wfrgang2pr5zvan3psfu0ff7krqgwfmp4sywyz97lp0lrlezyvqxhjtvy0gjz0ld5g4ha2udjurqqy2eny5",
+    "r_hash_decoded": "89ea13584da6e91d4ffc72551d546a06e13bfac2249ee1b23c18b3467ffb4ecc",
+    "memo": "Test invoice from Postman Collection",
+    "description_hash": null,
+    "num_satoshis": 20,
+    "expiry": 86400,
+    "expires_at": 1582383454,
+    "payment_preimage": null,
+    "settled": 0,
+    "settled_at": null,
+    "is_keysend": null,
+    "custom_records": null
 }
 ```
 

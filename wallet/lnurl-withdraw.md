@@ -39,6 +39,7 @@ LNURL generated
 ```text
 {
     "lnurl":"LNURL1DP68GURN8GHJ7MRWWPSHJTNRDUHHVVF0W4EK2U30WASKCMR9WSHHWC2LFACXUM35DDR5736ZF4HXVS6VGEV8GU6YDE49GC30D3H82UNV94C8YMMRV4EHX0M0W36R66MGD95KS4JGFADRS4ZRFEXK2SN2FFUXUSMHFA98XDZ8D3T9SDECWVHR43"
+    "ott":"Y4J9"
 }
 ```
 {% endapi-method-response-example %}
@@ -48,6 +49,8 @@ LNURL generated
 
 {% hint style="info" %}
 Note: These LNURLs are ONE-TIME use. This is to prevent repeated access to the wallet.
+
+the `ott` is a One-Time-Token that is encoded in the LNURL and saved by the wallet to verify
 {% endhint %}
 
 {% tabs %}

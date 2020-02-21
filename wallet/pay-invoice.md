@@ -40,31 +40,46 @@ Payment successfully executed
 
 ```
 {
-    "id":"wtx_JOhQFFI826owtE51AfFC975c",
-    "created_at":1577657602,
-    "wallet_id":"w_hkjS9r6mTYeABc",
-    "wtxType": {
-        "id": 20,
+    "id": "wtx_FBNJHXvQFgI4u4oCjKndq2Tq",
+    "created_at": 1582297179,
+    "num_satoshis": -5,
+    "user_label": "Postman Test",
+    "wallet": {
+        "id": "w_hkjS9r6mTYeABc",
+        "created_at": 1577654988,
+        "updated_at": 1582297179,
+        "user_label": "DEFAULT WALLET",
+        "balance": 3,
+        "statusType": {
+            "type": "wallet",
+            "name": "active",
+            "display_name": "Active"
+        }
+    },
+    "walletTransactionType": {
         "layer": "ln",
         "name": "ln_withdrawal",
         "display_name": "LN Withdrawal"
     },
-    "num_satoshis":-5,
-    "user_label":"Test invoice for docs",
-    "lnTx":{
-        "id":"lntx_82yveCX2Wn0EkkdyzvyBv",
-        "created_at":1577657602,
-        "updated_at":1577657602,
-        "dest_pubkey":"02c16cca44562b590dd279c942200bdccfd4f990c3a69fad620c10ef2f8228eaff",
-        "payment_request":"lnbc50n1p0qjf84pp5f70yqjjvu0z0esf7hksnca44d8j440mk5743qv70ku6jy9ewj8eqdpz23jhxapqd9h8vmmfvdjjqen0wgsxgmmrwvxqyz5vqcqzyssp583w0tugt4scyek2dat72p389lau0j8u9t5qnep29y0c32hyfn8rqrzjqt0pr36g7ke9elfvaqq3wmfey6laun0z8v0lg0nf9fdhdncxsp0y5zxkp5qqnsgqqqqqqquyqqqqqksqrc9qy9qsqzmvy83s8np7yrlqs98ge90tj3wwhfawjtq3cewv4vavmq0p5c4anhkm2aeyzjcvycttfgzwtak7nrrk6e3m3td8g4t8ha06uzzare4cqqne839",
-        "r_hash_decoded":"4f9e404a4ce3c4fcc13ebda13c76b569e55abf76a7ab1033cfb73522172e91f2",
-        "memo":"Test invoice for docs",
-        "num_satoshis":5,
-        "expiry":86400,
-        "expires_at":1577744002,
-        "payment_preimage":"6631394e526f35325135563854574f316651513330527a6e4e47315630795147662f7066466e4276664a773d",
-        "settled":1,
-        "settled_at":1577657602
+    "lnTx": {
+        "id": "lntx_dH2HtFowzUjHp7ovsjG4m5U1",
+        "created_at": 1582297179,
+        "dest_pubkey": "02c16cca44562b590dd279c942200bdccfd4f990c3a69fad620c10ef2f8228eaff",
+        "payment_request": "lnbc50n1p0yluznpp5u5txfgymgxkkrperkqa2wvt7qkmkg07duc90jvz67zm9weg2n8dqdq52phhxardv9hzq4r9wd6qxqyz5vqcqzyssp5ynfu54a6m8zccexu6mmm8y73kn8x2335l805dpu769rt9qmzq6nsrzjq2j9mmu6uq20m5nq8htsx0g4074r54d89vr2vwhz9m6xm8a0m3hg6ztt95qqtjgqqyqqqqqrqqqq8hsqyq9qy9qsq0kr0pnhlyzve2uqlznr6vglep3rzsml52c6tv5jz6yrvg3qnxrdy657cxxuxs3qetdu57kj7nscfz6f0z5p035g2ge6htpdca00480cq3qen60",
+        "r_hash_decoded": "e51664a09b41ad618723b03aa7317e05b7643fcde60af9305af0b657650a99da",
+        "memo": "Postman Test",
+        "description_hash": null,
+        "num_satoshis": 5,
+        "expiry": 86400,
+        "expires_at": 1582383579,
+        "payment_preimage": "30754e742b63514174693476676e5975706f4769487a794d6166796472775361625372487a437773674e303d",
+        "settled": 1,
+        "settled_at": 1582297179,
+        "is_keysend": null,
+        "custom_records": null
+    },
+    "passThru": {
+        "method": "api"
     }
 }
 ```
