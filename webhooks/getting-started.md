@@ -18,8 +18,6 @@ Webhooks can be setup in the LNPay.co dashboard. You are subscribed to all event
 
 ## Payloads
 
-Every payload will follow the same format. an Event ID is provided to identify the event, along with an object of the type details. The `data` section will always contain an array of relevant objects to the event. The key of each object in the data object will match the object id: `"wal":".."` matches `wal_czDztN5eJ4r5sJ` for now this seems the easiest way to plan for future changes and additions. 
-
 {% tabs %}
 {% tab title="wallet\_created" %}
 ```text
@@ -164,51 +162,67 @@ Every payload will follow the same format. an Event ID is provided to identify t
 ```
 {% endtab %}
 
-{% tab title="wallet\_transfer\_IN/OUT" %}
+{% tab title="wallet\_transfer" %}
 ```text
-# Same format for wallet_transfer_in and wallet_transfer_out
-# Note: 2 separate webhooks / events are created for a Wallet Transfer request
-# Note: the wtx['num_satoshis'] will be positive/negative depending on debit/credit
-
 {
-  "id": "evt_NotT4h3TTgo8vmw9LlZdjp",
-  "created_at": 1582471973,
-  "event": {
-    "type": "wallet",
-    "name": "wallet_transfer_out",
-    "display_name": "Wallet Transfer OUT"
-  },
-  "data": {
-    "wtx": {
-      "num_satoshis": -1,
-      "user_label": "Test transfer from Postman Collection",
-      "created_at": 1582471973,
-      "id": "wtx_2LZhCsmKUIDgcaJQOsBF80g",
-      "wal": {
-        "id": "wal_czDztN5eJ4r5sJ",
-        "created_at": 1582461859,
-        "updated_at": 1582471973,
-        "user_label": "My Postman Collection Wallet",
-        "balance": 18,
-        "statusType": {
-          "type": "wallet",
-          "name": "active",
-          "display_name": "Active"
+    "wtx_transfer_in": {
+        "id": "wtx_D2MOU88MTPpOytfdflCoGSs8",
+        "created_at": 1582297599,
+        "num_satoshis": 1,
+        "user_label": "Test transfer from Postman Collection",
+        "wallet": {
+            "id": "w_n743yizWqe43Oz",
+            "created_at": 1579001314,
+            "updated_at": 1582297599,
+            "user_label": "Paywall Wallet",
+            "balance": 4,
+            "statusType": {
+                "type": "wallet",
+                "name": "active",
+                "display_name": "Active"
+            }
+        },
+        "walletTransactionType": {
+            "layer": "ln",
+            "name": "ln_transfer_in",
+            "display_name": "Transfer In"
+        },
+        "lnTx": null,
+        "passThru": {
+            "lnPayParams": null,
+            "dest_wallet_id": "w_n743yizWqe43Oz",
+            "source_wallet_id": "w_hkjS9r6mTYeABc"
         }
-      },
-      "wtxType": {
-        "layer": "ln",
-        "name": "ln_transfer_out",
-        "display_name": "Transfer Out"
-      },
-      "lnTx": null,
-      "passThru": {
-        "lnPayParams": null,
-        "source_wallet_id": "wal_czDztN5eJ4r5sJ",
-        "dest_wallet_id": "w_hkjS9r6mTYeABc"
-      }
+    },
+    "wtx_transfer_out": {
+        "id": "wtx_LiAIfLI6x1T9sepE80aMYnlw",
+        "created_at": 1582297599,
+        "num_satoshis": -1,
+        "user_label": "Test transfer from Postman Collection",
+        "wallet": {
+            "id": "w_hkjS9r6mTYeABc",
+            "created_at": 1577654988,
+            "updated_at": 1582297599,
+            "user_label": "DEFAULT WALLET",
+            "balance": 2,
+            "statusType": {
+                "type": "wallet",
+                "name": "active",
+                "display_name": "Active"
+            }
+        },
+        "walletTransactionType": {
+            "layer": "ln",
+            "name": "ln_transfer_out",
+            "display_name": "Transfer Out"
+        },
+        "lnTx": null,
+        "passThru": {
+            "lnPayParams": null,
+            "dest_wallet_id": "w_n743yizWqe43Oz",
+            "source_wallet_id": "w_hkjS9r6mTYeABc"
+        }
     }
-  }
 }
 ```
 {% endtab %}
