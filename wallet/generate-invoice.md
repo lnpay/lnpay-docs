@@ -45,16 +45,16 @@ This returns an LnTx object
 {% code title="\# LnTx Object" %}
 ```
 {
-    "id": "lntx_UlXwgqNd2tl41ZrnWPlx7s6w",
-    "created_at": 1582297054,
+    "id": "lntx_ztkK7XxfqCq3ihmhJiUhnR",
+    "created_at": 1582462172,
     "dest_pubkey": "033868c219bdb51a33560d854d500fe7d3898a1ad9e05dd89d0007e11313588500",
-    "payment_request": "lnbc200n1p0ylm77pp5384pxkzd5m536nluwf2364r2qmsnh7kzyj0wrv3urze5vllmfmxqdp623jhxapqd9h8vmmfvdjjqenjdakjq5r0wd6x6ctwyppk7mrvv43hg6t0dccqzpgxqyz5vqsp56f338cr57djg5zsagrnxd80krpnqny0k3wldk5ctruwgftk9stnq9qy9qsqju8kfgplphd0jum5z8xs4fdjrv2wfrgang2pr5zvan3psfu0ff7krqgwfmp4sywyz97lp0lrlezyvqxhjtvy0gjz0ld5g4ha2udjurqqy2eny5",
-    "r_hash_decoded": "89ea13584da6e91d4ffc72551d546a06e13bfac2249ee1b23c18b3467ffb4ecc",
+    "payment_request": "lnbc200n1p09yaxupp5r7ckx99n00d2a7g8xtr8wup57w82t827kkeujsdgjyn45cjmym7sdp623jhxapqd9h8vmmfvdjjqenjdakjq5r0wd6x6ctwyppk7mrvv43hg6t0dccqzpgxqyz5vqsp5gyfwnrqnkyvxxgpww0vwsl8tfe524ggr5kngr8n8fn4vt9xl5ggs9qy9qsq42vwx9dh2n3ggrlgwqqxqq77detywruhv2s558uk3vfrumgmjfhs3y8hwtgxe7cx6svg4pr87qzfg8mgawsveqe6wn0te9d3h02fm4spxtzy5s",
+    "r_hash_decoded": "1fb16314b37bdaaef90732c6777034f38ea59d5eb5b3c941a891275a625b26fd",
     "memo": "Test invoice from Postman Collection",
     "description_hash": null,
     "num_satoshis": 20,
     "expiry": 86400,
-    "expires_at": 1582383454,
+    "expires_at": 1582548572,
     "payment_preimage": null,
     "settled": 0,
     "settled_at": null,
@@ -77,7 +77,7 @@ $ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 -d '{"num_satoshis":20, "memo":"Test invoice from the docs"}' \
 https://lnpay.co/v1/wallet/wi_skllxCQI7yurKi0NCCTc0wwO/invoice
 
-# Note we are using the "invoice" access_key as denoted by "wi_"
+# Note we are using the "invoice" access_key as denoted by "wi_" or "waki"
 ```
 {% endtab %}
 

@@ -28,3 +28,7 @@
 
 * [Decode Invoice](node/decode-invoice.md)
 
+## Webhooks
+
+* [Getting Started](webhooks/getting-started.md)
+

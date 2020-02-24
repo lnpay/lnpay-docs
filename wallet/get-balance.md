@@ -30,17 +30,16 @@ Wallet Access Key \(WAK\)
 
 ```
 {
-  "id": "w_pXHvKoKeKfrv",
-  "created_at": 1577600922,
-  "updated_at": 1577600922,
-  "user_label": "Wallet for ATM",
-  "balance": 1000,
-  "statusType": {
-        "id": 200,
+    "id": "wal_czDztN5eJ4r5sJ",
+    "created_at": 1582461859,
+    "updated_at": 1582461859,
+    "user_label": "My Postman Collection Wallet",
+    "balance": 0,
+    "statusType": {
         "type": "wallet",
         "name": "active",
         "display_name": "Active"
-    },
+    }
 }
 ```
 {% endapi-method-response-example %}

@@ -26,26 +26,25 @@ Wallet Created
 
 ```
 {
-    "id":"w_Noii2dJQmJjXdq",
-    "created_at":1577985279,
-    "updated_at":1577985279,
-    "user_label":"Tester API Wallet",
-    "balance":0,
+    "id": "wal_czDztN5eJ4r5sJ",
+    "created_at": 1582461859,
+    "updated_at": 1582461859,
+    "user_label": "My Postman Collection Wallet",
+    "balance": 0,
     "statusType": {
-        "id": 200,
         "type": "wallet",
         "name": "active",
         "display_name": "Active"
     },
-    "access_keys":{
-        "Wallet Admin":[
-            "wa_JEa9ZqCRT6oD4FsMgwWmqf1"
+    "access_keys": {
+        "Wallet Admin": [
+            "waka_kqvaiFFl4Tjq4rgAXlwsu6"
         ],
-        "Wallet Invoice":[
-            "wi_u7SjGDIG9a2EYTv4HyvXz3SW"
+        "Wallet Invoice": [
+            "waki_Q2XHBIfEAN33mLlwdYvusN6Q"
         ],
-        "Wallet Read":[
-            "wr_fWQd82MvofmBRrdT2x5YkGJ2"
+        "Wallet Read": [
+            "wakr_wIdkxqZqkRJd6MhWlsoH1yi"
         ]
     }
 }
