@@ -164,67 +164,51 @@ Every payload will follow the same format. an Event ID is provided to identify t
 ```
 {% endtab %}
 
-{% tab title="wallet\_transfer" %}
+{% tab title="wallet\_transfer\_IN/OUT" %}
 ```text
+# Same format for wallet_transfer_in and wallet_transfer_out
+# Note: 2 separate webhooks / events are created for a Wallet Transfer request
+# Note: the wtx['num_satoshis'] will be positive/negative depending on debit/credit
+
 {
-    "wtx_transfer_in": {
-        "id": "wtx_D2MOU88MTPpOytfdflCoGSs8",
-        "created_at": 1582297599,
-        "num_satoshis": 1,
-        "user_label": "Test transfer from Postman Collection",
-        "wallet": {
-            "id": "w_n743yizWqe43Oz",
-            "created_at": 1579001314,
-            "updated_at": 1582297599,
-            "user_label": "Paywall Wallet",
-            "balance": 4,
-            "statusType": {
-                "type": "wallet",
-                "name": "active",
-                "display_name": "Active"
-            }
-        },
-        "walletTransactionType": {
-            "layer": "ln",
-            "name": "ln_transfer_in",
-            "display_name": "Transfer In"
-        },
-        "lnTx": null,
-        "passThru": {
-            "lnPayParams": null,
-            "dest_wallet_id": "w_n743yizWqe43Oz",
-            "source_wallet_id": "w_hkjS9r6mTYeABc"
+  "id": "evt_NotT4h3TTgo8vmw9LlZdjp",
+  "created_at": 1582471973,
+  "event": {
+    "type": "wallet",
+    "name": "wallet_transfer_out",
+    "display_name": "Wallet Transfer OUT"
+  },
+  "data": {
+    "wtx": {
+      "num_satoshis": -1,
+      "user_label": "Test transfer from Postman Collection",
+      "created_at": 1582471973,
+      "id": "wtx_2LZhCsmKUIDgcaJQOsBF80g",
+      "wal": {
+        "id": "wal_czDztN5eJ4r5sJ",
+        "created_at": 1582461859,
+        "updated_at": 1582471973,
+        "user_label": "My Postman Collection Wallet",
+        "balance": 18,
+        "statusType": {
+          "type": "wallet",
+          "name": "active",
+          "display_name": "Active"
         }
-    },
-    "wtx_transfer_out": {
-        "id": "wtx_LiAIfLI6x1T9sepE80aMYnlw",
-        "created_at": 1582297599,
-        "num_satoshis": -1,
-        "user_label": "Test transfer from Postman Collection",
-        "wallet": {
-            "id": "w_hkjS9r6mTYeABc",
-            "created_at": 1577654988,
-            "updated_at": 1582297599,
-            "user_label": "DEFAULT WALLET",
-            "balance": 2,
-            "statusType": {
-                "type": "wallet",
-                "name": "active",
-                "display_name": "Active"
-            }
-        },
-        "walletTransactionType": {
-            "layer": "ln",
-            "name": "ln_transfer_out",
-            "display_name": "Transfer Out"
-        },
-        "lnTx": null,
-        "passThru": {
-            "lnPayParams": null,
-            "dest_wallet_id": "w_n743yizWqe43Oz",
-            "source_wallet_id": "w_hkjS9r6mTYeABc"
-        }
+      },
+      "wtxType": {
+        "layer": "ln",
+        "name": "ln_transfer_out",
+        "display_name": "Transfer Out"
+      },
+      "lnTx": null,
+      "passThru": {
+        "lnPayParams": null,
+        "source_wallet_id": "wal_czDztN5eJ4r5sJ",
+        "dest_wallet_id": "w_hkjS9r6mTYeABc"
+      }
     }
+  }
 }
 ```
 {% endtab %}
