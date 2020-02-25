@@ -140,7 +140,7 @@ the `lntx` field will be `null` if the transaction is a transfer
 {% tab title="curl" %}
 ```text
 $ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
-https://lnpay.co/v1/wallet/wakr_wIdkxqZqkRJd6MhWlsoH1yi/transactions
+https://lnpay.co/v1/wallet/wr_3YgsKHplFSyhzBKNVr8tohO/transactions
 ```
 {% endtab %}
 
