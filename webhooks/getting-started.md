@@ -15,10 +15,13 @@ Webhooks can be setup in the LNPay.co dashboard. You are subscribed to all event
 | wallet\_receive | Wallet Receive |  |
 | wallet\_transfer | Wallet Transfer | Transfer between LNPay wallets |
 | paywall\_created | Paywall Created |  |
+| paywall\_conversion | Paywall Conversion | Paywall paid |
 
 ## Payloads
 
 Every payload will follow the same format. an Event ID is provided to identify the event, along with an object of the type details. The `data` section will always contain an array of relevant objects to the event. The key of each object in the data object will match the object id: `"wal":".."` matches `wal_czDztN5eJ4r5sJ` for now this seems the easiest way to plan for future changes and additions. 
+
+### Wallets
 
 {% tabs %}
 {% tab title="wallet\_created" %}
@@ -212,9 +215,17 @@ Every payload will follow the same format. an Event ID is provided to identify t
 }
 ```
 {% endtab %}
+{% endtabs %}
 
+### Paywalls
+
+{% hint style="info" %}
+The `paywall_conversion` event will fire on successful payment of a paywall, the `wallet_receive` event will also fire - because an LN deposit has been made. 
+{% endhint %}
+
+{% tabs %}
 {% tab title="paywall\_created" %}
-```
+```text
 {
   "id": "evt_wFexxrj7HGFdlfrbvxs6wkN",
   "created_at": 1582541374,
@@ -249,6 +260,102 @@ Every payload will follow the same format. an Event ID is provided to identify t
         "description": "User must pay everytime the paywall is hit"
       },
       "template": null
+    }
+  }
+}
+```
+{% endtab %}
+
+{% tab title="paywall\_conversion" %}
+```
+{
+  "created_at": 1582635726,
+  "id": "evt_vokIxvCPLHrA6L4LBKmq2Qr",
+  "event": {
+    "type": "paywall",
+    "name": "paywall_conversion",
+    "display_name": "Paywall Conversion"
+  },
+  "data": {
+    "pywl": {
+      "id": "pywl_nwmA5Nq6oD9IuK",
+      "created_at": 1582541374,
+      "updated_at": 1582541374,
+      "destination_url": "https://www.github.com",
+      "memo": "My First Tester Paywall",
+      "lnd_value": 69,
+      "lnd_expiry": 86400,
+      "short_url": "03ccb",
+      "metadata": {
+        "extraAttributes": {
+          "unlock_threshold": 0,
+          "identifier_in_memo": false,
+          "send_partial_preimage_redirect": false
+        }
+      },
+      "paywall_link": "https://paywall.link/to/03ccb",
+      "custyDomain": {
+        "domain_name": "paywall.link"
+      },
+      "statusType": {
+        "type": "link",
+        "name": "active",
+        "display_name": "Active"
+      },
+      "paywallType": {
+        "name": "basic",
+        "display_name": "Basic Paywall",
+        "description": "User must pay everytime the paywall is hit"
+      },
+      "template": null
+    },
+    "wtx": {
+      "num_satoshis": 69,
+      "user_label": "Paywall Payment: 03ccb",
+      "created_at": 1582635725,
+      "id": "wtx_5IrhzzIwOXkUxR0A1xuJTpyX",
+      "wal": {
+        "id": "w_n743yizWqe43Oz",
+        "created_at": 1579001314,
+        "updated_at": 1582635725,
+        "user_label": "Paywall Wallet",
+        "balance": 73,
+        "statusType": {
+          "type": "wallet",
+          "name": "active",
+          "display_name": "Active"
+        }
+      },
+      "wtxType": {
+        "layer": "ln",
+        "name": "ln_deposit",
+        "display_name": "LN Deposit"
+      },
+      "lnTx": {
+        "id": "lntx_rscLdUZ8Rrp40j7iLUD7LtK",
+        "created_at": 1582635690,
+        "dest_pubkey": "033868c219bdb51a33560d854d500fe7d3898a1ad9e05dd89d0007e11313588500",
+        "payment_request": "lnbc690n1p092x42pp55gtf09qtgjzrp3ra0vlmvpaky3azmt7ngjzk2d2dyazm5cktkg4qdp9f4ujq3nfwfehggz5v4ehgetjypgxz7thv9kxccqzpgxqyz5vqsp5g70x0m3mh886sgzuraelza9entnz308ye7r7dry6pgjadj5e346q9qy9qsq6dwcnv5s0xjd04u430mm7gjh6tzhkypaezxtce38ag8n656jfh09velfs0lgpqczge95znsrx9vp0lzgapnmkm427snxqkckcfe54gqpzmlmfc",
+        "r_hash_decoded": "a21697940b448430c47d7b3fb607b6247a2dafd3448565354d2745ba62cbb22a",
+        "memo": "My First Tester Paywall",
+        "description_hash": null,
+        "num_satoshis": 69,
+        "expiry": 86400,
+        "expires_at": 1582722090,
+        "payment_preimage": "7facc7b2490ef02e828d907d352279c5686a1fa23a21928351f8ea6ef990d949",
+        "settled": 1,
+        "settled_at": 1582635725,
+        "is_keysend": null,
+        "custom_records": null,
+        "passThru": {
+          "userDefined": []
+        }
+      },
+      "passThru": {
+        "pywl_id": "pywl_nwmA5Nq6oD9IuK",
+        "userDefined": null,
+        "secondary_type": 50
+      }
     }
   }
 }
