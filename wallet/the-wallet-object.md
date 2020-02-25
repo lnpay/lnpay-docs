@@ -5,7 +5,7 @@ Wallets can be created freely within LNPay.co. Different wallets provide for bot
 {% code title="Wallet Object Response" %}
 ```text
 {
-  "id": "wal_hkjS9r6mTYeABc",
+  "id": "wal_czDztN5eJ4r5sJ",
   "created_at": 1577600922,
   "updated_at": 1577600922,
   "user_label": "DEFAULT WALLET",
@@ -28,9 +28,9 @@ You should see a table similar to the one below in your wallet dashboard. Note t
 
 | Permission | Wallet Access Key \(WAK\) |
 | :--- | :--- |
-| Wallet Admin | waka\_Opnn4kGOGBMnfCLFXtsDnjTb |
-| Wallet Invoice | waki\_skllxCQI7yurKi0NCCTc0wwO |
-| Wallet Read | wakr\_3YgsKHplFSyhzBKNVr8tohO |
+| Wallet Admin | waka\_kqvaiFFl4Tjq4rgAXlwsu6 |
+| Wallet Invoice | waki\_Q2XHBIfEAN33mLlwdYvusN6Q |
+| Wallet Read | wakr\_wIdkxqZqkRJd6MhWlsoH1yi |
 
 {% hint style="danger" %}
 They key prefixes were changed 2020/23/02 to better describe them. 

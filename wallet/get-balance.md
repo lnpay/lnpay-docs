@@ -51,7 +51,7 @@ Wallet Access Key \(WAK\)
 {% tab title="curl" %}
 ```text
 $ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
-https://lnpay.co/v1/wallet/wr_3YgsKHplFSyhzBKNVr8tohO
+https://lnpay.co/v1/wallet/wakr_wIdkxqZqkRJd6MhWlsoH1yi
 
 # We are using the "read" access key in this instance as denoted by the "wr_"
 ```
