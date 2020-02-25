@@ -220,7 +220,7 @@ Every payload will follow the same format. an Event ID is provided to identify t
 ### Paywalls
 
 {% hint style="info" %}
-The `paywall_conversion` event will fire on successful payment of a paywall, the `wallet_receive` event will also fire - because an LN deposit has been made. 
+The `paywall_conversion` event will fire on successful payment of a paywall, the `wallet_receive` event will also fire - because the wallet received money.
 {% endhint %}
 
 {% tabs %}
