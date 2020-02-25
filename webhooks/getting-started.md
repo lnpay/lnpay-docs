@@ -269,8 +269,8 @@ The `paywall_conversion` event will fire on successful payment of a paywall, the
 {% tab title="paywall\_conversion" %}
 ```
 {
-  "created_at": 1582635726,
-  "id": "evt_vokIxvCPLHrA6L4LBKmq2Qr",
+  "created_at": 1582638979,
+  "id": "evt_am119vTFxDZRbOHMy3mxBU5",
   "event": {
     "type": "paywall",
     "name": "paywall_conversion",
@@ -312,14 +312,14 @@ The `paywall_conversion` event will fire on successful payment of a paywall, the
     "wtx": {
       "num_satoshis": 69,
       "user_label": "Paywall Payment: 03ccb",
-      "created_at": 1582635725,
-      "id": "wtx_5IrhzzIwOXkUxR0A1xuJTpyX",
+      "created_at": 1582638978,
+      "id": "wtx_es70fgXOn9CiJkVU4NG5TSB",
       "wal": {
         "id": "w_n743yizWqe43Oz",
         "created_at": 1579001314,
-        "updated_at": 1582635725,
+        "updated_at": 1582638978,
         "user_label": "Paywall Wallet",
-        "balance": 73,
+        "balance": 625,
         "statusType": {
           "type": "wallet",
           "name": "active",
@@ -332,28 +332,36 @@ The `paywall_conversion` event will fire on successful payment of a paywall, the
         "display_name": "LN Deposit"
       },
       "lnTx": {
-        "id": "lntx_rscLdUZ8Rrp40j7iLUD7LtK",
-        "created_at": 1582635690,
+        "id": "lntx_mjgB1kvanfkwxII7O2KDa8J",
+        "created_at": 1582638941,
         "dest_pubkey": "033868c219bdb51a33560d854d500fe7d3898a1ad9e05dd89d0007e11313588500",
-        "payment_request": "lnbc690n1p092x42pp55gtf09qtgjzrp3ra0vlmvpaky3azmt7ngjzk2d2dyazm5cktkg4qdp9f4ujq3nfwfehggz5v4ehgetjypgxz7thv9kxccqzpgxqyz5vqsp5g70x0m3mh886sgzuraelza9entnz308ye7r7dry6pgjadj5e346q9qy9qsq6dwcnv5s0xjd04u430mm7gjh6tzhkypaezxtce38ag8n656jfh09velfs0lgpqczge95znsrx9vp0lzgapnmkm427snxqkckcfe54gqpzmlmfc",
-        "r_hash_decoded": "a21697940b448430c47d7b3fb607b6247a2dafd3448565354d2745ba62cbb22a",
+        "payment_request": "lnbc690n1p092f6app508wdlqmphj94x0se8hzezndaqkk96q4hk0n5cfn62zzhyrmfky3qdp9f4ujq3nfwfehggz5v4ehgetjypgxz7thv9kxccqzpgxqyz5vqsp5yvezsgl6k9ftweec8a04w6szy5q95da64hhj7vhks2t0chkgapms9qy9qsqv4grtk7lhqlac877vpyzvhxncwfaelf7rsf9z4w8jutkwucsexm5nz8v3szf9cpf0khp9n7ssms2zy6njsmdslh2f4j3g4lnwtnyktqpd6w0fj",
+        "r_hash_decoded": "79dcdf8361bc8b533e193dc5914dbd05ac5d02b7b3e74c267a5085720f69b122",
         "memo": "My First Tester Paywall",
         "description_hash": null,
         "num_satoshis": 69,
         "expiry": 86400,
-        "expires_at": 1582722090,
-        "payment_preimage": "7facc7b2490ef02e828d907d352279c5686a1fa23a21928351f8ea6ef990d949",
+        "expires_at": 1582725341,
+        "payment_preimage": "c647b4ea73c64caadfcd2adb313c15c9c508252b9cb43dbfb16481a4c59eb592",
         "settled": 1,
-        "settled_at": 1582635725,
+        "settled_at": 1582638978,
         "is_keysend": null,
         "custom_records": null,
         "passThru": {
-          "userDefined": []
+          "userDefined": {
+            "id": "03ccb",
+            "utm_source": "telegram",
+            "myUrlParameter": "specialVar"
+          }
         }
       },
       "passThru": {
         "pywl_id": "pywl_nwmA5Nq6oD9IuK",
-        "userDefined": null,
+        "userDefined": { 
+          "id": "03ccb",
+          "utm_source": "telegram", //from https://paywall.link/to/03ccb?utm_source=telegram&myUrlParameter=specialVar
+          "myUrlParameter": "specialVar" //from https://paywall.link/to/03ccb?utm_source=telegram&myUrlParameter=specialVar
+        },
         "secondary_type": 50
       }
     }
@@ -362,6 +370,10 @@ The `paywall_conversion` event will fire on successful payment of a paywall, the
 ```
 {% endtab %}
 {% endtabs %}
+
+{% hint style="success" %}
+Note the `wtx['passThru']['userDefined']` variable, you can pass query string / URL parameter in directly from the paywall link as such:`https://paywall.link/to/03ccb?utm_source=telegram&myUrlParameter=specialVar`
+{% endhint %}
 
 ## Special Headers
 
