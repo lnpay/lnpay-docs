@@ -18,6 +18,10 @@ access\_key with admin permission
 {% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
+{% api-method-parameter name="passThru" type="string" required=false %}
+base64 encoded json of data to use in webhooks, etc
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="memo" type="string" required=false %}
 memo for the invoice
 {% endapi-method-parameter %}

@@ -18,6 +18,10 @@ PostWalletInvoice
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="passThru" type="string" required=false %}
+JSON string. you can reference these parameters later via webhooks, etc. Good for ticket \# or a certain ID
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="description\_hash" type="string" required=false %}
 base64 encoded hash of payment. If this is provided, memo will be ignored.
 {% endapi-method-parameter %}
@@ -59,7 +63,13 @@ This returns an LnTx object
     "settled": 0,
     "settled_at": null,
     "is_keysend": null,
-    "custom_records": null
+    "custom_records": null,
+    "passThru": {
+        "wallet_id": "wal_czDztN5eJ4r5sJ",
+        "userDefined": {
+            "ticketId": "556"
+        }
+    }
 }
 ```
 {% endcode %}
@@ -74,8 +84,8 @@ This returns an LnTx object
 $ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 -H "Content-Type: application/json" \
 -X POST \
--d '{"num_satoshis":20, "memo":"Test invoice from the docs"}' \
-https://lnpay.co/v1/wallet/wi_skllxCQI7yurKi0NCCTc0wwO/invoice
+-d '{"num_satoshis":20, "memo":"Test invoice from the docs","passThru":" {\"ticketId\":\"556\"} "}' \
+https://lnpay.co/v1/wallet/waki_skllxCQI7yurKi0NCCTc0wwO/invoice
 
 # Note we are using the "invoice" access_key as denoted by "wi_" or "waki"
 ```
