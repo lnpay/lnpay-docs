@@ -26,7 +26,7 @@
 
 ## Webhooks
 
-* [Getting Started](webhooks/getting-started.md)
+* [Webhook Intro](webhooks/getting-started.md)
 
 ## Node
 
