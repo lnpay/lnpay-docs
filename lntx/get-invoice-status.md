@@ -4,7 +4,7 @@ description: >-
   transaction has been settled or not, and for how much
 ---
 
-# Get Invoice Status
+# Get lntx Trans
 
 {% api-method method="get" host="https://lnpay.co" path="/v1/lntx/:lntx\_id" %}
 {% api-method-summary %}

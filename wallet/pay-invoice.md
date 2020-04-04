@@ -26,7 +26,7 @@ access key
 
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="lnPayParams" type="array" required=false %}
+{% api-method-parameter name="passThru" type="array" required=false %}
 JSON array of custom data to pass thru
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}

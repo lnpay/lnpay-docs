@@ -22,7 +22,7 @@
 ## LNTX \(LN Invoice\) <a id="lntx"></a>
 
 * [LnTx \(Lightning Invoice\) Object](lntx/untitled.md)
-* [Get Invoice Status](lntx/get-invoice-status.md)
+* [Get lntx Trans](lntx/get-invoice-status.md)
 
 ## Webhooks
 
