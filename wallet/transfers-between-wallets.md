@@ -135,7 +135,7 @@ $ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"dest_wallet_id":"w_n743yizWqe43Oz","num_satoshis":1,"memo":"Test transfer"}' \
-https://lnpay.co/v1/wallet/wa_Opnn4kGOGBMnfCLFXtsDnjTb/transfer
+https://lnpay.co/v1/wallet/waka_kqvaiFFl4Tjq4rgAXlwsu6/transfer
 ```
 {% endtab %}
 

@@ -61,11 +61,9 @@ lnpay_py.initialize(lnpay_api_key)
 {% endtab %}
 {% endtabs %}
 
-## In the Wild
+## Postman Collection
 
-#### [LNPay M5StackSats](https://github.com/arcbtc/M5StackSats/tree/master/M5StackSatsLNPAY)
-
-The LNPay implementation of [@BTCSocialist](https://www.twitter.com/@BTCSocialist) [M5StackSats](https://github.com/arcbtc/M5StackSats) is a cheap and easy to use lightweight PoS system. 
+#### [https://www.getpostman.com/collections/fc4f2351a12b3446841c](https://www.getpostman.com/collections/fc4f2351a12b3446841c)
 
 
 

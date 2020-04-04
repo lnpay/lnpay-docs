@@ -18,8 +18,8 @@ PostWalletInvoice
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="passThru" type="string" required=false %}
-JSON string. you can reference these parameters later via webhooks, etc. Good for ticket \# or a certain ID
+{% api-method-parameter name="passThru" type="object" required=false %}
+JSON object. you can reference these parameters later via webhooks, etc. Good for ticket \# or a certain ID
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="description\_hash" type="string" required=false %}
