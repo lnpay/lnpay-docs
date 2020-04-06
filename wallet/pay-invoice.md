@@ -26,8 +26,8 @@ access key
 
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="passThru" type="array" required=false %}
-JSON array of custom data to pass thru
+{% api-method-parameter name="passThru" type="object" required=false %}
+JSON object of custom data to pass thru
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}

@@ -21,6 +21,12 @@ Webhooks can be setup in the LNPay.co dashboard. You are subscribed to all event
 
 Every payload will follow the same format. an Event ID is provided to identify the event, along with an object of the type details. The `data` section will always contain an array of relevant objects to the event. The key of each object in the data object will match the object id: `"wal":".."` matches `wal_czDztN5eJ4r5sJ` for now this seems the easiest way to plan for future changes and additions. 
 
+{% hint style="info" %}
+Pay careful attention to `passThru` value. This is where context data that you have set previously, will be available throughout the journey of the wallet transaction. 
+
+NOTE: there are some server parameters that are passed through in this field as well, so it is a good idea to prefix your variables with something e.g. `xyz_ticketId`
+{% endhint %}
+
 ### Wallets
 
 {% tabs %}
@@ -160,7 +166,10 @@ Every payload will follow the same format. an Event ID is provided to identify t
         "is_keysend": null,
         "custom_records": null
       },
-      "passThru": []
+      "passThru": {
+        "myVariable":"special-id",
+        "ticketId":"23"
+      }
     }
   }
 }
