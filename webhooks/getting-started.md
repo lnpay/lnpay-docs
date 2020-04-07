@@ -27,6 +27,12 @@ Pay careful attention to `passThru` value. This is where context data that you h
 NOTE: there are some server parameters that are passed through in this field as well, so it is a good idea to prefix your variables with something e.g. `xyz_ticketId`
 {% endhint %}
 
+{% hint style="success" %}
+Another way to send `passThru` data:
+
+`https://paywall.link/to/03ccb?utm_source=telegram&myUrlParameter=specialVar`
+{% endhint %}
+
 ### Wallets
 
 {% tabs %}
@@ -379,10 +385,6 @@ The `paywall_conversion` event will fire on successful payment of a paywall, the
 ```
 {% endtab %}
 {% endtabs %}
-
-{% hint style="success" %}
-Note the `wtx['passThru']['userDefined']` variable, you can pass query string / URL parameter in directly from the paywall link as such:`https://paywall.link/to/03ccb?utm_source=telegram&myUrlParameter=specialVar`
-{% endhint %}
 
 ## Special Headers
 
