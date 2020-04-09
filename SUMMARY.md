@@ -24,6 +24,10 @@
 * [LnTx \(Lightning Invoice\) Object](lntx/untitled.md)
 * [Get Invoice Status](lntx/get-invoice-status.md)
 
+## Paywall
+
+* [Create Paywall](paywall/create-paywall.md)
+
 ## Webhooks
 
 * [Webhook Intro](webhooks/getting-started.md)
@@ -31,8 +35,4 @@
 ## Node
 
 * [Decode Invoice](node/decode-invoice.md)
-
-## Paywall
-
-* [Create Paywall](paywall/create-paywall.md)
 
