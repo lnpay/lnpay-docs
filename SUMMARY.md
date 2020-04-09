@@ -32,3 +32,7 @@
 
 * [Decode Invoice](node/decode-invoice.md)
 
+## Paywall
+
+* [Create Paywall](paywall/create-paywall.md)
+
