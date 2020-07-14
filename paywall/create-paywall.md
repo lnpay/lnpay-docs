@@ -147,3 +147,4 @@ Example: if a user pays a paywall with 6\_HR, whenever they click on the paywall
     </tr>
   </tbody>
 </table>
+

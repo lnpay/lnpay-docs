@@ -12,7 +12,7 @@ The libraries below are wrappers to help you work with the LNPay API. How to ins
 
 {% tabs %}
 {% tab title="JavaScript" %}
-[https://github.com/lnpay/lnpay-js](https://github.com/lnpay/lnpay-js)
+{% embed url="https://github.com/lnpay/lnpay-js" %}
 
 ```javascript
 <script src="https://unpkg.com/lnpay-js@^0.1/dist/lnpay.min.js"></script>
@@ -26,10 +26,20 @@ npm install lnpay-js --save
 {% endtab %}
 
 {% tab title="Python" %}
-[https://github.com/lnpay/lnpay-py](https://github.com/lnpay/lnpay-py)
+{% embed url="https://github.com/lnpay/lnpay-py" %}
+
+
 
 ```
 pip install lnpay-py
+```
+{% endtab %}
+
+{% tab title="Go" %}
+{% embed url="https://github.com/fiatjaf/lnpay-go" %}
+
+```text
+go get github.com/fiatjaf/lnpay
 ```
 {% endtab %}
 {% endtabs %}
