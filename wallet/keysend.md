@@ -21,12 +21,6 @@ Access key with withdraw permission \(e.g. waka\_ or waki\_\)
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
-{% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
-Authentication token to track down who is emptying our stocks.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-
 {% api-method-body-parameters %}
 {% api-method-parameter name="dest\_pubkey" type="string" required=true %}
 Pubkey of destination node
