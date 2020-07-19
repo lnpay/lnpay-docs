@@ -2,7 +2,7 @@
 description: Initiate a keysend payment from your wallet to a destination pubkey
 ---
 
-# Keysend
+# Keysend \(New!\)
 
 {% api-method method="post" host="https://lnpay.co" path="/v1/wallet/:access\_key/keysend" %}
 {% api-method-summary %}

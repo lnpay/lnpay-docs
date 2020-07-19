@@ -16,7 +16,7 @@
 * [Get Transactions](wallet/get-transactions.md)
 * [Generate Invoice](wallet/generate-invoice.md)
 * [Pay Invoice](wallet/pay-invoice.md)
-* [Keysend](wallet/keysend.md)
+* [Keysend \(New!\)](wallet/keysend.md)
 * [Transfers Between Wallets](wallet/transfers-between-wallets.md)
 * [LNURL Withdraw](wallet/lnurl-withdraw.md)
 
