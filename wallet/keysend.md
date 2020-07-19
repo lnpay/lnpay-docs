@@ -22,6 +22,10 @@ Access key with withdraw permission \(e.g. waka\_ or waki\_\)
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="passThru" type="object" required=false %}
+data to pass along with this invoice for webhooks \(e.g. ticketId, etc\)
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="dest\_pubkey" type="string" required=true %}
 Pubkey of destination node
 {% endapi-method-parameter %}
