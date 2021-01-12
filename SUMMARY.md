@@ -7,6 +7,7 @@
 * [How to Authenticate](basics/how-to-authenticate.md)
 * [Sending Requests](basics/sending-requests.md)
 * [Error Handling](basics/error-handling.md)
+* [How to Structure Your App](basics/how-to-structure-your-app.md)
 
 ## Wallet
 
