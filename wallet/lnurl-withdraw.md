@@ -18,6 +18,10 @@ access\_key with admin permission
 {% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
+{% api-method-parameter name="public" type="boolean" required=false %}
+\(default: false\) if set to true, the LNURL will be a one-time allowable withdraw for the amount set with no sensitive data in the LNURL. Good for public use.
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="passThru" type="string" required=false %}
 base64 encoded json of data to use in webhooks, etc
 {% endapi-method-parameter %}
