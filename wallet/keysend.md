@@ -35,7 +35,7 @@ satoshis
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="custom\_records" type="object" required=false %}
-key:value pairs to be sent in the onion. key must be an integer greater than 65536. Too many values here will break things.
+key:value pairs to be sent in the onion. key must be an integer greater than 65536. value must be a string, encoded binary data is not supported. Too many values here will break things.
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
