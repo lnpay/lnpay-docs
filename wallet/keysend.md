@@ -46,7 +46,7 @@ key:value pairs to be sent in the onion. key must be an integer greater than 655
 Keysend Sent!
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
     "id": "wtx_s1xa5yZFlCegcgtXkaeo34",
     "created_at": 1595165573,
@@ -102,7 +102,7 @@ Keysend Sent!
 Some error
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
     "name": "Bad Request",
     "message": "Failure reason: FAILURE_REASON_NO_ROUTE",

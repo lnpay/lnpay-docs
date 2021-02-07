@@ -21,7 +21,7 @@ The libraries below are wrappers to help you work with the LNPay API. How to ins
 
 {% tab title="Node.js" %}
 ```bash
-npm install lnpay-js --save
+npm install lnpay
 ```
 {% endtab %}
 
@@ -56,8 +56,12 @@ LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
 
 {% tab title="Node.js" %}
 ```javascript
-//Use your Public API Key found  - this one here is presented as test
-LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
+import LNPay from 'lnpay';
+
+const lnpay = LNPay({
+  secretKey: 'pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp',
+  walletAccessKey: 'waka_kqvaiFFl4Tjq4rgAXlwsu6',
+});
 ```
 {% endtab %}
 
