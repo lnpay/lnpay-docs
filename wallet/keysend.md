@@ -10,7 +10,7 @@ PostWalletKeysend
 {% endapi-method-summary %}
 
 {% api-method-description %}
-NOTE: This function has ASYNCHRONOUS capabilities! Pass in the \`X-LNPAY-ASYNC\` header to receive immediate response. the success / fail of the asynchronous job will not be able to be determined at this time.
+NOTE: This function has ASYNCHRONOUS capabilities! Pass in the `"X-LNPAY-ASYNC: 1"` http header to receive immediate response. the success / fail of the asynchronous job will not be able to be determined at this time.
 {% endapi-method-description %}
 
 {% api-method-spec %}
