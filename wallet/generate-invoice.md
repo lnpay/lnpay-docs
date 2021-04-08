@@ -1,6 +1,6 @@
 # Generate Invoice
 
-{% api-method method="post" host="https://lnpay.co/v1/wallet/" path=":wallet\_access\_key/invoice" %}
+{% api-method method="post" host="https://api.lnpay.co/v1/wallet/" path=":wallet\_access\_key/invoice" %}
 {% api-method-summary %}
 PostWalletInvoice
 {% endapi-method-summary %}
@@ -85,7 +85,7 @@ $ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"num_satoshis":5, "memo":"Test invoice from the docs","passThru":" {\"ticketId\":\"556\"} "}' \
-https://lnpay.co/v1/wallet/waki_Q2XHBIfEAN33mLlwdYvusN6Q/invoice
+https://api.lnpay.co/v1/wallet/waki_Q2XHBIfEAN33mLlwdYvusN6Q/invoice
 
 # Note we are using the "invoice" access_key as denoted by "wi_" or "waki"
 ```

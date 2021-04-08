@@ -7,7 +7,7 @@ description: >-
 
 # Get Transactions
 
-{% api-method method="get" host="https://lnpay.co/v1/wallet/" path=":wallet\_access\_key/transactions" %}
+{% api-method method="get" host="https://api.lnpay.co/v1/wallet/" path=":wallet\_access\_key/transactions" %}
 {% api-method-summary %}
 GetWalletTransactions
 {% endapi-method-summary %}
@@ -140,7 +140,7 @@ the `lntx` field will be `null` if the transaction is a transfer
 {% tab title="curl" %}
 ```text
 $ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
-https://lnpay.co/v1/wallet/wakr_wIdkxqZqkRJd6MhWlsoH1yi/transactions
+https://api.lnpay.co/v1/wallet/wakr_wIdkxqZqkRJd6MhWlsoH1yi/transactions
 ```
 {% endtab %}
 

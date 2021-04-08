@@ -1,6 +1,6 @@
 # Create Wallet
 
-{% api-method method="post" host="https://lnpay.co/v1/wallet" path="" %}
+{% api-method method="post" host="https://api.lnpay.co/v1/wallet" path="" %}
 {% api-method-summary %}
 PostCreateWallet
 {% endapi-method-summary %}
@@ -61,7 +61,7 @@ $ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"user_label":"Tester API Wallet"}' \
-https://lnpay.co/v1/wallet
+https://api.lnpay.co/v1/wallet
 ```
 {% endtab %}
 

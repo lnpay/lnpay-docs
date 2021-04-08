@@ -18,7 +18,7 @@ A **LIVE** test key `pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp` is provided in the docs f
 {% tab title="curl" %}
 ```text
 $ curl -H "X-Api-Key: pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp" \
-https://lnpay.co/v1/wallets
+https://api.lnpay.co/v1/wallets
 ```
 {% endtab %}
 {% endtabs %}

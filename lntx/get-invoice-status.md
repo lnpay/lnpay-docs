@@ -6,7 +6,7 @@ description: >-
 
 # Get Invoice Status
 
-{% api-method method="get" host="https://lnpay.co" path="/v1/lntx/:lntx\_id" %}
+{% api-method method="get" host="https://api.lnpay.co" path="/v1/lntx/:lntx\_id" %}
 {% api-method-summary %}
 GetLnTxObject
 {% endapi-method-summary %}
@@ -56,7 +56,7 @@ The LnTx Object
 {% tab title="curl" %}
 ```text
 $ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
-https://lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv
+https://api.lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv
 ```
 {% endtab %}
 
@@ -91,7 +91,7 @@ Slim down the response size by appending the fields you want as query parameters
 
 ```text
 $ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
-https://lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv?fields=settled,num_satoshis
+https://api.lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv?fields=settled,num_satoshis
 ```
 {% endhint %}
 

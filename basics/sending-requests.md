@@ -17,7 +17,7 @@ $ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 -X POST \
 -d num_satoshis=20 \
 -d memo="Test invoice from the docs" \
-https://lnpay.co/v1/user/wallet/wi_skllxCQI7yurKi0NCCTc0wwO/invoice
+https://api.lnpay.co/v1/user/wallet/wi_skllxCQI7yurKi0NCCTc0wwO/invoice
 ```
 {% endtab %}
 {% endtabs %}
@@ -33,7 +33,7 @@ $ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"num_satoshis":20, "memo":"Test invoice from the docs"}' \
-https://lnpay.co/v1/user/wallet/wi_skllxCQI7yurKi0NCCTc0wwO/invoice
+https://api.lnpay.co/v1/user/wallet/wi_skllxCQI7yurKi0NCCTc0wwO/invoice
 ```
 {% endtab %}
 {% endtabs %}
@@ -46,7 +46,7 @@ By default the objects are returned with all fields. You can limit the response 
 {% tab title="curl" %}
 ```text
 $ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
-https://lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv?fields=num_satoshis,settled
+https://api.lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv?fields=num_satoshis,settled
 
 //Response
 

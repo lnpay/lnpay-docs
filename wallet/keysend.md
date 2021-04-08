@@ -4,7 +4,7 @@ description: Initiate a keysend payment from your wallet to a destination pubkey
 
 # Keysend \(New!\)
 
-{% api-method method="post" host="https://lnpay.co" path="/v1/wallet/:access\_key/keysend" %}
+{% api-method method="post" host="https://api.lnpay.co" path="/v1/wallet/:access\_key/keysend" %}
 {% api-method-summary %}
 PostWalletKeysend
 {% endapi-method-summary %}
@@ -126,7 +126,7 @@ $ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"dest_pubkey":"033868c219bdb51a33560d854d500fe7d3898a1ad9e05dd89d0007e11313588500","num_satoshis":2}' \
-https://lnpay.co/v1/wallet/waka_kqvaiFFl4Tjq4rgAXlwsu6/keysend
+https://api.lnpay.co/v1/wallet/waka_kqvaiFFl4Tjq4rgAXlwsu6/keysend
 
 # Note we are using the "admin" access_key as denoted by "wa_"
 ```

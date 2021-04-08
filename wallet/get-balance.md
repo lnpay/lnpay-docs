@@ -4,7 +4,7 @@ description: Get the wallet object which includes current balance
 
 # Get Balance
 
-{% api-method method="get" host="https://lnpay.co/v1/wallet/" path=":wallet\_access\_key" %}
+{% api-method method="get" host="https://api.lnpay.co/v1/wallet/" path=":wallet\_access\_key" %}
 {% api-method-summary %}
 GetWallet
 {% endapi-method-summary %}
@@ -51,7 +51,7 @@ Wallet Access Key \(WAK\)
 {% tab title="curl" %}
 ```text
 $ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
-https://lnpay.co/v1/wallet/wakr_wIdkxqZqkRJd6MhWlsoH1yi
+https://api.lnpay.co/v1/wallet/wakr_wIdkxqZqkRJd6MhWlsoH1yi
 
 # We are using the "read" access key in this instance as denoted by the "wr_"
 ```

@@ -4,7 +4,7 @@ description: Decode an invoice and get route hints. Uses LNPay.co node
 
 # Decode Invoice
 
-{% api-method method="get" host="https://lnpay.co" path="/v1/node/default/payments/decodeinvoice" %}
+{% api-method method="get" host="https://api.lnpay.co" path="/v1/node/default/payments/decodeinvoice" %}
 {% api-method-summary %}
 DecodeInvoice
 {% endapi-method-summary %}
@@ -76,7 +76,7 @@ Decoded invoice
 {% tab title="curl" %}
 ```text
 $ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
-https://lnpay.co/v1/node/default/payments/decodeinvoice?payment_request=lnbc690n1p0ydkfdpp55gpdd7dx0vp9n0jylsvr9xnng9n6rh8ezd0pkqqueq396qd73uuqdq0g3jk6meqf4jk6mcxqyz5vqcqzyssp5e99mt7vvu8hlvtemy2f59deumdjfzzguxk06mqta870z43n3aa7qrzjqwjs8k8rpuhlgpcfd534khdk8d8u70uf5ef6edh585lufy48vaqpjzty65qqd3cqqyqqqqqqqqqqqcsqr59qy9qsqf5z5n29j64zdvyyp603k7y8w2tsvlv02jlh4tg6qan2mdxgd8xc4hc2sggkwpnekg0tnjstj2q3r7nhwqtdp4hua9vdnsgp8r8j25jspp0l69j
+https://api.lnpay.co/v1/node/default/payments/decodeinvoice?payment_request=lnbc690n1p0ydkfdpp55gpdd7dx0vp9n0jylsvr9xnng9n6rh8ezd0pkqqueq396qd73uuqdq0g3jk6meqf4jk6mcxqyz5vqcqzyssp5e99mt7vvu8hlvtemy2f59deumdjfzzguxk06mqta870z43n3aa7qrzjqwjs8k8rpuhlgpcfd534khdk8d8u70uf5ef6edh585lufy48vaqpjzty65qqd3cqqyqqqqqqqqqqqcsqr59qy9qsqf5z5n29j64zdvyyp603k7y8w2tsvlv02jlh4tg6qan2mdxgd8xc4hc2sggkwpnekg0tnjstj2q3r7nhwqtdp4hua9vdnsgp8r8j25jspp0l69j
 ```
 {% endtab %}
 {% endtabs %}
