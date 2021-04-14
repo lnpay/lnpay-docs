@@ -37,4 +37,5 @@
 ## Node
 
 * [Decode Invoice](node/decode-invoice.md)
+* [QueryRoutes](node/queryroutes.md)
 
