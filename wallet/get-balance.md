@@ -30,15 +30,20 @@ Wallet Access Key \(WAK\)
 
 ```
 {
-    "id": "wal_czDztN5eJ4r5sJ",
-    "created_at": 1582461859,
-    "updated_at": 1582461859,
-    "user_label": "My Postman Collection Wallet",
-    "balance": 0,
-    "statusType": {
-        "type": "wallet",
-        "name": "active",
-        "display_name": "Active"
+    "id":"wal_czDztN5eJ4r5sJ",
+    "created_at":1582461859,
+    "updated_at":1618419816,
+    "user_label":"My Postman Collection Wallet",
+    "balance":74,
+    "balance_msat":null,
+    "statusType":{
+        "type":"wallet",
+        "name":"active",
+        "display_name":"Active"
+    },
+    "walletType":{
+        "name":"generic_wallet",
+        "display_name":"Generic Wallet"
     }
 }
 ```

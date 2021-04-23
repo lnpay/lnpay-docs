@@ -65,7 +65,7 @@ the `ott` is a One-Time-Token that is encoded in the LNURL and saved by the wall
 {% tab title="curl" %}
 ```bash
 $ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
-https://api.lnpay.co/v1/wallet/wa_Opnn4kGOGBMnfCLFXtsDnjTb/lnurl/withdraw?num_satoshis=3
+"https://api.lnpay.co/v1/wallet/wa_Opnn4kGOGBMnfCLFXtsDnjTb/lnurl/withdraw?num_satoshis=3"
 
 # We are using the "admin" access key in this instance as denoted by the "wa_"
 ```
