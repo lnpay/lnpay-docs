@@ -19,7 +19,12 @@
 * [Pay Invoice](wallet/pay-invoice.md)
 * [Keysend \(New!\)](wallet/keysend.md)
 * [Transfers Between Wallets](wallet/transfers-between-wallets.md)
-* [LNURL Withdraw](wallet/lnurl-withdraw.md)
+
+## LNURL
+
+* [Overview](lnurl/overview.md)
+* [Disposable LNURL-withdraw](lnurl/lnurl-withdraw.md)
+* [Permanent LNURL-withdraw](lnurl/permanent-lnurl-withdraw.md)
 
 ## LNTX \(LN Invoice\) <a id="lntx"></a>
 

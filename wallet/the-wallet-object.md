@@ -31,6 +31,7 @@ You should see a table similar to the one below in your wallet dashboard. Note t
 | Wallet Admin | waka\_kqvaiFFl4Tjq4rgAXlwsu6 |
 | Wallet Invoice | waki\_Q2XHBIfEAN33mLlwdYvusN6Q |
 | Wallet Read | wakr\_wIdkxqZqkRJd6MhWlsoH1yi |
+| Wallet LNURL Withdraw |  |
 
 {% hint style="danger" %}
 They key prefixes were changed 2020/23/02 to better describe them. 
