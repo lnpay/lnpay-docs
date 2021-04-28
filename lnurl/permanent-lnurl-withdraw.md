@@ -62,7 +62,7 @@ These LNURLs allow unlimited access to withdrawing from the wallet!
 {% tab title="cURL" %}
 ```text
 curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
-"https://api.lnpay.co/v1/wallet/wa_Opnn4kGOGBMnfCLFXtsDnjTb/lnurl/withdraw-static?num_satoshis=3"
+"https://api.lnpay.co/v1/wallet/waka_kqvaiFFl4Tjq4rgAXlwsu6/lnurl/withdraw-static?num_satoshis=3"
 
 #
 ```
