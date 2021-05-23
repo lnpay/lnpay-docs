@@ -2,7 +2,7 @@
 description: Initiate a keysend payment from your wallet to a destination pubkey
 ---
 
-# Keysend \(New!\)
+# Keysend
 
 {% api-method method="post" host="https://api.lnpay.co" path="/v1/wallet/:access\_key/keysend" %}
 {% api-method-summary %}
@@ -22,6 +22,10 @@ Access key with withdraw permission \(e.g. waka\_ or waki\_\)
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="fee\_limit\_msat" type="integer" required=false %}
+e.g. 1000 \(1 sat fee limit\) LNPay default is 5% of payment amount
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="passThru" type="object" required=false %}
 data to pass along with this invoice for webhooks \(e.g. ticketId, etc\)
 {% endapi-method-parameter %}
@@ -116,7 +120,12 @@ Some error
 {% endapi-method %}
 
 {% hint style="info" %}
-See this LND release for more information about keysend: [https://github.com/lightningnetwork/lnd/releases/tag/v0.9.0-beta](https://github.com/lightningnetwork/lnd/releases/tag/v0.9.0-beta)
+`FAILURE_REASON_NO_ROUTE` is a common error that means one of two things
+
+* There is no route because the `fee_limit_msat` is too low or the default 5% is too low \(this is usually the issue\)
+* There is no route because the lightning node cannot find a path \(sometimes this happens with private nodes, or new nodes\)
+
+Check the [QueryRoutes](../node/queryroutes.md) endpoint for help in determining what the issue is.
 {% endhint %}
 
 {% tabs %}

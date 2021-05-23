@@ -22,6 +22,10 @@ access key
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="fee\_limit\_msat" type="number" required=false %}
+e.g. 1000 \(1 sat fee limit\) LNPay default fee limit is 5% of payment amount
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="payment\_request" type="string" required=true %}
 
 {% endapi-method-parameter %}
@@ -104,6 +108,15 @@ Response directly from node if node error
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% hint style="info" %}
+`FAILURE_REASON_NO_ROUTE` is a common error that means one of two things
+
+* There is no route because the `fee_limit_msat` is too low or the default 5% is too low \(this is usually the issue\)
+* There is no route because the lightning node cannot find a path \(sometimes this happens with private nodes, or new nodes\)
+
+Check the [QueryRoutes](../node/queryroutes.md) endpoint for help in determining what the issue is.
+{% endhint %}
 
 {% tabs %}
 {% tab title="curl" %}
