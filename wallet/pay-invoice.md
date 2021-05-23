@@ -23,7 +23,7 @@ access key
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="fee\_limit\_msat" type="number" required=false %}
-e.g. 1000 \(1 sat fee limit\) LNPay default fee limit is 5% of payment amount
+max fee e.g. 1000 \(1 sat\) LNPay default fee limit is 5% of payment amount
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="payment\_request" type="string" required=true %}

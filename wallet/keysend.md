@@ -23,7 +23,7 @@ Access key with withdraw permission \(e.g. waka\_ or waki\_\)
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="fee\_limit\_msat" type="integer" required=false %}
-e.g. 1000 \(1 sat fee limit\) LNPay default is 5% of payment amount
+max fee e.g. 1000 \(1 sat\) LNPay default is 5% of payment amount
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="passThru" type="object" required=false %}
