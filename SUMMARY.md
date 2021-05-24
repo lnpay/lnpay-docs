@@ -20,11 +20,11 @@
 * [Keysend](wallet/keysend.md)
 * [Transfers Between Wallets](wallet/transfers-between-wallets.md)
 
-## LNURL
+## LNURL-withdraw
 
-* [How does LNURL-withdraw work?](lnurl/how-does-lnurl-withdraw-work.md)
-* [Disposable LNURL-withdraw](lnurl/lnurl-withdraw.md)
-* [Permanent LNURL-withdraw](lnurl/permanent-lnurl-withdraw.md)
+* [How does LNURL-withdraw work?](lnurl-withdraw/how-does-lnurl-withdraw-work.md)
+* [Disposable LNURL-withdraw](lnurl-withdraw/lnurl-withdraw.md)
+* [Permanent LNURL-withdraw](lnurl-withdraw/permanent-lnurl-withdraw.md)
 
 ## LNTX \(LN Invoice\) <a id="lntx"></a>
 
