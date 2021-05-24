@@ -4,7 +4,7 @@ description: >-
   user paste an invoice.
 ---
 
-# How does LNURL withdraw work?
+# How does LNURL-withdraw work?
 
 Typically when a user wishes to receive sats, they generate an invoice, and that invoice is paid by the sender. In most user-facing b2c applications, it is pretty bad UX for the user to have to generate an invoice and then paste it into a service. 
 

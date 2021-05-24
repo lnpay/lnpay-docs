@@ -22,7 +22,7 @@
 
 ## LNURL
 
-* [How does LNURL withdraw work?](lnurl/overview.md)
+* [How does LNURL-withdraw work?](lnurl/overview.md)
 * [Disposable LNURL-withdraw](lnurl/lnurl-withdraw.md)
 * [Permanent LNURL-withdraw](lnurl/permanent-lnurl-withdraw.md)
 
