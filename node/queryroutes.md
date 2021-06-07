@@ -1,6 +1,6 @@
 # QueryRoutes
 
-{% api-method method="get" host="https://api.lnpay.co" path="/v1/default/payment/queryroutes?pub\_key=&amt=" %}
+{% api-method method="get" host="https://api.lnpay.co" path="/v1/node/default/payments/queryroutes?pub\_key=&amt=" %}
 {% api-method-summary %}
 Get QueryRoutes
 {% endapi-method-summary %}
