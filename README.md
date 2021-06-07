@@ -50,7 +50,7 @@ go get github.com/fiatjaf/lnpay
 {% tab title="JavaScript" %}
 ```javascript
 //Use your Public API Key found  - this one here is presented as test
-LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
+LNPay.Initialize('sak_XXXXXXX');
 ```
 {% endtab %}
 
@@ -59,8 +59,8 @@ LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
 import LNPay from 'lnpay';
 
 const lnpay = LNPay({
-  secretKey: 'pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp',
-  walletAccessKey: 'waka_kqvaiFFl4Tjq4rgAXlwsu6',
+  secretKey: 'sak_XXXXXXX',
+  walletAccessKey: 'waka_XXXXXXX',
 });
 ```
 {% endtab %}
