@@ -12,11 +12,11 @@ This endpoint allows you to probe a route to see the fee and if the destination 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-query-parameters %}
-{% api-method-parameter name="pub\_key" type="string" %}
+{% api-method-parameter name="pub\_key" type="string" required=true %}
 destination pub key
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="amt" type="number" %}
+{% api-method-parameter name="amt" type="number" required=true %}
 amount in sats
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
