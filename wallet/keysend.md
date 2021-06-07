@@ -131,11 +131,11 @@ Check the [QueryRoutes](../node/queryroutes.md) endpoint for help in determining
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u sak_XXXXXXX: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"dest_pubkey":"033868c219bdb51a33560d854d500fe7d3898a1ad9e05dd89d0007e11313588500","num_satoshis":2}' \
-https://api.lnpay.co/v1/wallet/waka_kqvaiFFl4Tjq4rgAXlwsu6/keysend
+https://api.lnpay.co/v1/wallet/waka_XXXXXXX/keysend
 
 # Note we are using the "admin" access_key as denoted by "wa_"
 ```

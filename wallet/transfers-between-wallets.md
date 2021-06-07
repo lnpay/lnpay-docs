@@ -131,11 +131,11 @@ Error reported
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u sak_XXXXXXX: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"dest_wallet_id":"w_n743yizWqe43Oz","num_satoshis":1,"memo":"Test transfer"}' \
-https://api.lnpay.co/v1/wallet/waka_kqvaiFFl4Tjq4rgAXlwsu6/transfer
+https://api.lnpay.co/v1/wallet/waka_XXXXXXX/transfer
 ```
 {% endtab %}
 

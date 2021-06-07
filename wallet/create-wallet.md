@@ -57,7 +57,7 @@ Wallet Created
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u sak_XXXXXXX: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"user_label":"Tester API Wallet"}' \

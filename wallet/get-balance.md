@@ -55,18 +55,18 @@ Wallet Access Key \(WAK\)
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
-https://api.lnpay.co/v1/wallet/wakr_wIdkxqZqkRJd6MhWlsoH1yi
+$ curl -u sak_XXXXXXX: \
+https://api.lnpay.co/v1/wallet/wakr_XXXXX
 
-# We are using the "read" access key in this instance as denoted by the "wr_"
+# We are using the "read" access key in this instance as denoted by the "wakr_"
 ```
 {% endtab %}
 
 {% tab title="JavaScript" %}
 ```javascript
-LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
+LNPay.Initialize('sak_XXXXXXX');
 
-let myWallet = new LNPayWallet('wr_3YgsKHplFSyhzBKNVr8tohO');
+let myWallet = new LNPayWallet('wr_XXXXXX');
 myWallet.getInfo(function(result) {
       console.log('Balance:' + result.balance);
     }
@@ -76,8 +76,8 @@ myWallet.getInfo(function(result) {
 
 {% tab title="Python" %}
 ```python
-lnpay_py.initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp')
-my_wallet = LNPayWallet('wr_3YgsKHplFSyhzBKNVr8tohO')
+lnpay_py.initialize('sak_XXXXXXX')
+my_wallet = LNPayWallet('wr_XXXXXXX')
 
 info = my_wallet.get_info()
 print(info)

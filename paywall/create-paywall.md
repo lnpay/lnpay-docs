@@ -91,7 +91,7 @@ Paywall created
 {% tabs %}
 {% tab title="curl" %}
 ```text
-curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+curl -u sak_XXXXXXX: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"destination_url":"https://bigsun.xyz","memo":"This is my memo","short_url":"bigsun","num_satoshis":100}' \

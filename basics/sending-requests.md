@@ -13,11 +13,11 @@ If no `Content-Type` is specified, the request will be interpreted as Form Data.
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u sak_XXXXXXX: \
 -X POST \
 -d num_satoshis=20 \
 -d memo="Test invoice from the docs" \
-https://api.lnpay.co/v1/user/wallet/wi_skllxCQI7yurKi0NCCTc0wwO/invoice
+https://api.lnpay.co/v1/user/wallet/wi_XXXXXXX/invoice
 ```
 {% endtab %}
 {% endtabs %}
@@ -29,11 +29,11 @@ JSON requests **MUST** contain the `Content-Type: application/json` header. Exam
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u sak_XXXXXXX: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"num_satoshis":20, "memo":"Test invoice from the docs"}' \
-https://api.lnpay.co/v1/user/wallet/wi_skllxCQI7yurKi0NCCTc0wwO/invoice
+https://api.lnpay.co/v1/user/wallet/wi_XXXXXXXX/invoice
 ```
 {% endtab %}
 {% endtabs %}
@@ -45,8 +45,8 @@ By default the objects are returned with all fields. You can limit the response 
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
-https://api.lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv?fields=num_satoshis,settled
+$ curl -u sak_XXXXXXX: \
+https://api.lnpay.co/v1/lntx/lntx_XXXXXXX?fields=num_satoshis,settled
 
 //Response
 

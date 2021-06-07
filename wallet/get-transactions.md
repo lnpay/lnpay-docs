@@ -139,14 +139,14 @@ the `lntx` field will be `null` if the transaction is a transfer
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
-https://api.lnpay.co/v1/wallet/wakr_wIdkxqZqkRJd6MhWlsoH1yi/transactions
+$ curl -u sak_XXXXXXX: \
+https://api.lnpay.co/v1/wallet/wakr_XXXXXXX/transactions
 ```
 {% endtab %}
 
 {% tab title="JavaScript" %}
 ```javascript
-LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
+LNPay.Initialize('sak_XXXXXXX');
 
 let myWallet = new LNPayWallet(walletAccessKey);
 let queryParams = {};
@@ -160,10 +160,10 @@ myWallet.getTransactions(queryParams,
 
 {% tab title="Python" %}
 ```python
-lnpay_py.initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp')
+lnpay_py.initialize('sak_XXXXXXX')
 from lnpay_py.wallet import LNPayWallet
 
-my_wallet = LNPayWallet('wi_skllxCQI7yurKi0NCCTc0wwO')
+my_wallet = LNPayWallet('waki_XXXXXX')
 transactions = my_wallet.get_transactions()
 print(transactions)
 ```

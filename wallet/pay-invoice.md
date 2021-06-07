@@ -121,11 +121,11 @@ Check the [QueryRoutes](../node/queryroutes.md) endpoint for help in determining
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u sak_XXXXXXX: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"payment_request":"lnbc50n1p0qjf84p..."}' \
-https://api.lnpay.co/v1/wallet/waka_kqvaiFFl4Tjq4rgAXlwsu6/withdraw
+https://api.lnpay.co/v1/wallet/waka_XXXXXXX/withdraw
 
 # Note we are using the "admin" access_key as denoted by "wa_"
 ```
@@ -133,9 +133,9 @@ https://api.lnpay.co/v1/wallet/waka_kqvaiFFl4Tjq4rgAXlwsu6/withdraw
 
 {% tab title="JavaScript" %}
 ```javascript
-LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
+LNPay.Initialize('sak_XXXXXXX');
 
-let myWallet = new LNPayWallet('wa_Opnn4kGOGBMnfCLFXtsDnjTb');
+let myWallet = new LNPayWallet('waka_XXXXXXX');
 let invoiceParams = {"payment_request":"lnbc1111..."};
 myWallet.payInvoice(invoiceParams,
     function(result) {
@@ -147,10 +147,10 @@ myWallet.payInvoice(invoiceParams,
 
 {% tab title="Python" %}
 ```python
-lnpay_py.initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp')
+lnpay_py.initialize('sak_XXXXXXX')
 from lnpay_py.wallet import LNPayWallet
 
-my_wallet = LNPayWallet('wa_Opnn4kGOGBMnfCLFXtsDnjTb')
+my_wallet = LNPayWallet('waka_XXXXXXX')
 invoice_params = {
     'payment_request': 'lnbc....'
 }

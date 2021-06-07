@@ -81,11 +81,11 @@ This returns an LnTx object
 {% tabs %}
 {% tab title="curl" %}
 ```text
-$ curl -u pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp: \
+$ curl -u sak_XXXXXXX: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"num_satoshis":5, "memo":"Test invoice from the docs","passThru":" {\"ticketId\":\"556\"} "}' \
-https://api.lnpay.co/v1/wallet/waki_Q2XHBIfEAN33mLlwdYvusN6Q/invoice
+https://api.lnpay.co/v1/wallet/waki_XXXXXXX/invoice
 
 # Note we are using the "invoice" access_key as denoted by "wi_" or "waki"
 ```
@@ -93,9 +93,9 @@ https://api.lnpay.co/v1/wallet/waki_Q2XHBIfEAN33mLlwdYvusN6Q/invoice
 
 {% tab title="JavaScript" %}
 ```javascript
-LNPay.Initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp');
+LNPay.Initialize('sak_XXXXXXX');
 
-let myWallet = new LNPayWallet('wi_skllxCQI7yurKi0NCCTc0wwO');
+let myWallet = new LNPayWallet('waki_XXXXXX');
 let invoiceParams = {"num_satoshis":2,"memo":"Tester"};
 myWallet.createInvoice(invoiceParams,
     function(result) {
@@ -107,10 +107,10 @@ myWallet.createInvoice(invoiceParams,
 
 {% tab title="Python" %}
 ```python
-lnpay_py.initialize('pak_O0iUMxk8kK_qUzkT4YKFvp1ZsUtp')
+lnpay_py.initialize('sak_XXXXXXX')
 from lnpay_py.wallet import LNPayWallet
 
-my_wallet = LNPayWallet('wi_skllxCQI7yurKi0NCCTc0wwO')
+my_wallet = LNPayWallet('waki_XXXXXXX')
 invoice_params = {
     'num_satoshis': 2,
     'memo': 'Tester'
