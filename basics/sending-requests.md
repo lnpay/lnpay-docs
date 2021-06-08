@@ -55,3 +55,16 @@ https://api.lnpay.co/v1/lntx/lntx_XXXXXXX?fields=num_satoshis,settled
 {% endtab %}
 {% endtabs %}
 
+## Pagination
+
+Most endpoints support pagination if it is a list-based GET request. `page` and `per-page` are supported
+
+{% tabs %}
+{% tab title="curl" %}
+```text
+$ curl -u sak_XXXXXXX: \
+https://api.lnpay.co/v1/wallet/wakr_XXXXXX/transactions?page=2&per-page=100
+```
+{% endtab %}
+{% endtabs %}
+

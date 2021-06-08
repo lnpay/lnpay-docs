@@ -28,7 +28,7 @@ amount in sats
 Route found! Here are the details
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
     "routes": [
         {
@@ -69,7 +69,7 @@ Route found! Here are the details
 An error returned as to why the route was unavailable
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
     "name": "Bad Request",
     "message": "unable to find a path to destination",
