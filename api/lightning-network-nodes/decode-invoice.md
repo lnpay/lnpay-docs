@@ -1,6 +1,6 @@
----
+--
 description: Decode an invoice and get route hints. Uses LNPay.co node
----
+--
 
 # Decode Invoice
 
