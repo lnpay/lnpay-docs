@@ -1,46 +1,42 @@
 # Table of contents
 
-* [Getting Started](README.md)
+* [Introduction](README.md)
 
-## Basics
+## Guides
 
-* [How to Authenticate](basics/how-to-authenticate.md)
-* [Sending Requests](basics/sending-requests.md)
-* [Error Handling](basics/error-handling.md)
-* [How to Structure Your App](basics/how-to-structure-your-app.md)
+* [Outsource App Wallets](guides/outsource-custodial-wallets.md)
 
-## Wallet
+## API
 
-* [The Wallet Object](wallet/the-wallet-object.md)
-* [Create Wallet](wallet/create-wallet.md)
-* [Get Balance](wallet/get-balance.md)
-* [Get Transactions](wallet/get-transactions.md)
-* [Generate Invoice](wallet/generate-invoice.md)
-* [Pay Invoice](wallet/pay-invoice.md)
-* [Keysend](wallet/keysend.md)
-* [Transfers Between Wallets](wallet/transfers-between-wallets.md)
+* [Get Started](api/get-started/README.md)
+  * [API Keys & Access Keys](api/get-started/access-keys.md)
+  * [How to Authenticate](api/get-started/authentication.md)
+  * [Sending Requests](api/get-started/requests.md)
+  * [Error Handling](api/get-started/errors.md)
+* [Wallets](api/wallets/README.md)
+  * [Create Wallet](api/wallets/create.md)
+  * [Retrieve Wallet](api/wallets/retrieve.md)
+  * [List Wallets](api/wallets/list.md)
+  * [List Wallet Transactions](api/wallets/list-transactions.md)
+  * [List All Transactions](api/wallets/list-all-transactions.md)
+* [Wallet Send / Receive](api/wallet-transactions/README.md)
+  * [Generate Invoice](api/wallet-transactions/generate-invoice.md)
+  * [Pay Invoice](api/wallet-transactions/pay-invoice.md)
+  * [Keysend](api/wallet-transactions/keysend.md)
+  * [Transfers Between Wallets](api/wallet-transactions/transfers.md)
+* [LnTx \(Get Invoice Status\)](api/lntx/README.md)
+  * [Get Invoice Status](api/lntx/retrieve.md)
+* [LNURL-withdraw](api/lnurl-withdraw/README.md)
+  * [How does LNURL-withdraw work?](api/lnurl-withdraw/how-does-lnurl-withdraw-work.md)
+  * [Disposable LNURL-withdraw](api/lnurl-withdraw/disposable-lnurl-withdraw.md)
+  * [Permanent LNURL-withdraw](api/lnurl-withdraw/permanent-lnurl-withdraw.md)
+* [Lightning Network Nodes](api/lightning-network-nodes/README.md)
+  * [QueryRoutes](api/lightning-network-nodes/query-routes.md)
+  * [Decode Invoice](api/lightning-network-nodes/decode-invoice.md)
+* [Webhooks](api/webhooks-1.md)
 
-## LNURL-withdraw
+## LAPPS
 
-* [How does LNURL-withdraw work?](lnurl-withdraw/how-does-lnurl-withdraw-work.md)
-* [Disposable LNURL-withdraw](lnurl-withdraw/lnurl-withdraw.md)
-* [Permanent LNURL-withdraw](lnurl-withdraw/permanent-lnurl-withdraw.md)
-
-## LNTX \(LN Invoice\) <a id="lntx"></a>
-
-* [LnTx \(Lightning Invoice\) Object](lntx/untitled.md)
-* [Get Invoice Status](lntx/get-invoice-status.md)
-
-## Paywall
-
-* [Create Paywall](paywall/create-paywall.md)
-
-## Webhooks
-
-* [Webhook Intro](webhooks/getting-started.md)
-
-## Node
-
-* [Decode Invoice](node/decode-invoice.md)
-* [QueryRoutes](node/queryroutes.md)
+* [Paywall](lapps/paywall/README.md)
+  * [Create Paywall](lapps/paywall/create.md)
 
