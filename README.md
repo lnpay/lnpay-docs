@@ -26,10 +26,10 @@ pip install lnpay-py
 {% endtab %}
 
 {% tab title="Go" %}
-{% embed url="https://github.com/fiatjaf/lnpay-go" %}
+[https://github.com/lnpay/lnpay-go](https://github.com/lnpay/lnpay-go)
 
 ```text
-go get github.com/fiatjaf/lnpay
+go get github.com/lnpay/lnpay-go
 ```
 {% endtab %}
 
