@@ -35,8 +35,3 @@
   * [Decode Invoice](api/lightning-network-nodes/decode-invoice.md)
 * [Webhooks](api/webhooks-1.md)
 
-## LAPPS
-
-* [Paywall](lapps/paywall/README.md)
-  * [Create Paywall](lapps/paywall/create.md)
-
