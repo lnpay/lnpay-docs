@@ -33,6 +33,14 @@ go get github.com/lnpay/lnpay-go
 ```
 {% endtab %}
 
+{% tab title="PHP" %}
+[https://github.com/lnpay/lnpay-php](https://github.com/lnpay/lnpay-php)
+
+```text
+composer require lnpay/lnpay-php
+```
+{% endtab %}
+
 {% tab title="JavaScript" %}
 {% hint style="info" %}
 This used client side - use the `pak_` everywhere.
@@ -75,6 +83,22 @@ lnpaySecretKey := lnpay.TEST_KEY
 // use your key here: "sak_..."
 
 client := lnpay.NewClient(lnpaySecretKey)
+```
+{% endtab %}
+
+{% tab title="PHP" %}
+```
+// Load the autoload file from composer's vendor directory
+require '../vendor/autoload.php';
+
+use LNPay\LNPayClient;
+
+// Creating Client object
+$lnPayClient = new LNPayClient(
+        'sak_KEY'
+    );
+    
+$lnPayClient->wallet->setWalletAccessKey('wal_KEY');
 ```
 {% endtab %}
 
