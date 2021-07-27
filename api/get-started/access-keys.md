@@ -88,7 +88,13 @@ The purpose of these keys are to restrict use with client side applications. Bro
 
 {% tabs %}
 {% tab title="Server Side " %}
-| Function | Access Key | Wallet Key |
+This table breaks down when it is appropriate to use the API Key and Wallet Key combo
+
+```text
+https://api.lnpay.co/v1/<Wallet Key>?access-token=<Access Key>
+```
+
+| Function | API Key | Wallet Key |
 | :--- | :---: | :---: |
 | [Create Wallet](../wallets/create.md) | `sak_` | N/A |
 | [Retrieve Wallet](../wallets/retrieve.md) | `sak_` | `wal_` |
@@ -100,7 +106,13 @@ The purpose of these keys are to restrict use with client side applications. Bro
 {% endtab %}
 
 {% tab title="Client Side" %}
-| Function | Access Key | Wallet Key |
+This table breaks down when it is appropriate to use the API Key and Wallet Key combo
+
+```text
+https://api.lnpay.co/v1/<Wallet Key>?access-token=<Access Key>
+```
+
+| Function | API Key | Wallet Key |
 | :--- | :---: | :---: |
 | [Create Wallet](../wallets/create.md) | N/A | N/A |
 | [Retrieve Wallet](../wallets/retrieve.md) | `pak_` | `waka_`or `wakr_` |
