@@ -164,7 +164,7 @@ https://api.lnpay.co/v1/wallet/wal_XXXXXXX/transactions
 ```javascript
 LNPay.Initialize('pak_XXXXXXX');
 
-let myWallet = new LNPayWallet('wakr_XXXX');
+let myWallet = new LNPayWallet('waka_XXXX');
 let queryParams = {};
 myWallet.getTransactions(queryParams,
     function(result) {
