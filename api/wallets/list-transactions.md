@@ -18,7 +18,7 @@ GetWalletTransactions
 {% api-method-path-parameters %}
 {% api-method-parameter name="wallet\_key" type="string" required=false %}
 wal\_ for server side  
-wakr\_ for client side
+waka\_ for client side
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
