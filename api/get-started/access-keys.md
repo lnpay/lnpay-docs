@@ -91,7 +91,7 @@ The purpose of these keys are to restrict use with client side applications. Bro
 This table breaks down when it is appropriate to use the API Key and Wallet Key combo
 
 ```text
-https://api.lnpay.co/v1/<Wallet Key>?access-token=<Access Key>
+https://api.lnpay.co/v1/<Wallet Key>?access-token=<API Key>
 ```
 
 | Function | API Key | Wallet Key |
@@ -109,7 +109,7 @@ https://api.lnpay.co/v1/<Wallet Key>?access-token=<Access Key>
 This table breaks down when it is appropriate to use the API Key and Wallet Key combo
 
 ```text
-https://api.lnpay.co/v1/<Wallet Key>?access-token=<Access Key>
+https://api.lnpay.co/v1/<Wallet Key>?access-token=<API Key>
 ```
 
 | Function | API Key | Wallet Key |
