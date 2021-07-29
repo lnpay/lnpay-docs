@@ -10,7 +10,7 @@ This endpoint is only available to the **Secret Access Key \(`sak_`\)**
 
 {% api-method method="get" host="https://api.lnpay.co/" path="v1/wallet-transactions" %}
 {% api-method-summary %}
-GetTransactions
+ListTransactions
 {% endapi-method-summary %}
 
 {% api-method-description %}

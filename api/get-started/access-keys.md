@@ -79,7 +79,7 @@ The purpose of these keys are to restrict use with client side applications. Bro
         <p>wallet_withdraw</p>
       </td>
       <td style="text-align:left">waklw_1Lldqo...</td>
-      <td style="text-align:left">This key is used in public LNURL links</td>
+      <td style="text-align:left">This key does not need an API key in order to withdraw!</td>
     </tr>
   </tbody>
 </table>

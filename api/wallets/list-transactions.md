@@ -6,7 +6,7 @@ description: Get transactions for a particular wallet
 
 {% api-method method="get" host="https://api.lnpay.co/" path="v1/wallet/:wallet\_key/transactions" %}
 {% api-method-summary %}
-GetWalletTransactions
+ListWalletTransactions
 {% endapi-method-summary %}
 
 {% api-method-description %}
