@@ -1,27 +1,15 @@
 # List Wallets
 
 {% hint style="info" %}
-This endpoint is only available to the **Secret Access Key \(`sak_`\)**
+This endpoint is only available to the **Secret Access Key (`sak_`)**
 {% endhint %}
 
-{% api-method method="get" host="https://api.lnpay.co/" path="v1/wallets" %}
-{% api-method-summary %}
-ListWallets
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.lnpay.co/" path="v1/wallets" method="get" summary="ListWallets" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Array of wallets
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Array of wallets" %}
 ```
 [
     {
@@ -39,7 +27,7 @@ Array of wallets
         "walletType":{
             "name":"generic_wallet",
             "display_name":"Generic Wallet"
-        }
+        },
     },
     {
         "id":"wal_czDztN5eJ4r5sJ",
@@ -60,8 +48,5 @@ Array of wallets
     }
 ]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
+{% endswagger-response %}
+{% endswagger %}

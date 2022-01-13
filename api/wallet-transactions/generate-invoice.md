@@ -7,54 +7,42 @@ description: >-
 
 # Generate Invoice
 
-{% api-method method="post" host="https://api.lnpay.co/" path="v1/wallet/:wallet\_key/invoice" %}
-{% api-method-summary %}
-PostWalletInvoice
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.lnpay.co/" path="v1/wallet/:wallet_key/invoice" method="post" summary="PostWalletInvoice" %}
+{% swagger-description %}
 Creating an invoice returns the LNPay representation of a BOLT11 invoice - the LnTx object
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="wallet\_key" type="string" required=true %}
-wal\_ for server side  
-waki\_ for client side
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% swagger-parameter in="path" name="wallet_key" type="string" %}
+wal_ for server side
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="passThru" type="object" required=false %}
-JSON object. you can reference these parameters later via webhooks, etc. Good for ticket \# or a certain ID
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="description\_hash" type="string" required=false %}
+
+waki_ for client side
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="passThru" type="object" %}
+JSON object. you can reference these parameters later via webhooks, etc. Good for ticket # or a certain ID
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="description_hash" type="string" %}
 base64 encoded hash of payment. If this is provided, memo will be ignored.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="memo" type="string" required=false %}
+{% swagger-parameter in="body" name="memo" type="string" %}
 
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="expiry" type="integer" required=false %}
-seconds, defaults to 86400 \(1 day\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="body" name="expiry" type="integer" %}
+seconds, defaults to 86400 (1 day)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="num\_satoshis" type="integer" required=true %}
+{% swagger-parameter in="body" name="num_satoshis" type="integer" %}
 
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=201 %}
-{% api-method-response-example-description %}
-This returns an LnTx object 
-{% endapi-method-response-example-description %}
-
-{% code title="\# LnTx Object" %}
+{% swagger-response status="201" description="This returns an LnTx object " %}
+{% code title="# LnTx Object" %}
 ```
 {
     "id": "lntx_ztkK7XxfqCq3ihmhJiUhnR",
@@ -81,10 +69,8 @@ This returns an LnTx object
 }
 ```
 {% endcode %}
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% hint style="success" %}
 To check if an invoice has been paid or not use the [LnTx endpoint ](../lntx/retrieve.md)
@@ -92,7 +78,7 @@ To check if an invoice has been paid or not use the [LnTx endpoint ](../lntx/ret
 
 {% tabs %}
 {% tab title="cURL" %}
-```text
+```
 curl -u sak_XXXXXXX: \
 -H "Content-Type: application/json" \
 -X POST \
@@ -152,4 +138,3 @@ myWallet.createInvoice(invoiceParams,
 {% hint style="info" %}
 See the [Access Keys](../get-started/access-keys.md#permission-breakdown) section on how to define `wallet_key`
 {% endhint %}
-

@@ -4,45 +4,33 @@ description: Generate an LN invoice from the specified wallet
 
 # Pay Invoice
 
-{% api-method method="post" host="https://api.lnpay.co/" path="v1/wallet/:wallet\_key/withdraw" %}
-{% api-method-summary %}
-PostWalletSend
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.lnpay.co/" path="v1/wallet/:wallet_key/withdraw" method="post" summary="PostWalletSend" %}
+{% swagger-description %}
 Pay an invoice from this wallet
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="wallet\_key" type="string" required=true %}
-wal\_ for server side  
-waka\_ for client side
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% swagger-parameter in="path" name="wallet_key" type="string" %}
+wal_ for server side
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="fee\_limit\_msat" type="number" required=false %}
-max fee e.g. 1000 \(1 sat\) LNPay default fee limit is 5% of payment amount
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="payment\_request" type="string" required=true %}
 
-{% endapi-method-parameter %}
+waka_ for client side
+{% endswagger-parameter %}
 
-{% api-method-parameter name="passThru" type="object" required=false %}
+{% swagger-parameter in="body" name="fee_limit_msat" type="number" %}
+max fee e.g. 1000 (1 sat) LNPay default fee limit is 5% of payment amount
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="payment_request" type="string" %}
+
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="passThru" type="object" %}
 JSON object of custom data to pass thru
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=201 %}
-{% api-method-response-example-description %}
-Payment successfully executed
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="201" description="Payment successfully executed" %}
 ```
 # WTX OBJECT
 
@@ -90,13 +78,9 @@ Payment successfully executed
     }
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Response directly from node if node error
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="Response directly from node if node error" %}
 ```
 {
     "name":"Bad Request",
@@ -105,23 +89,21 @@ Response directly from node if node error
     "status":400
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% hint style="info" %}
 `FAILURE_REASON_NO_ROUTE` is a common error that means one of two things
 
-* There is no route because the `fee_limit_msat` is too low or the default 5% is too low \(this is usually the issue\)
-* There is no route because the lightning node cannot find a path \(sometimes this happens with private nodes, or new nodes\)
+* There is no route because the `fee_limit_msat` is too low or the default 5% is too low (this is usually the issue)
+* There is no route because the lightning node cannot find a path (sometimes this happens with private nodes, or new nodes)
 
 Check the [QueryRoutes](../lightning-network-nodes/query-routes.md) endpoint for help in determining what the issue is.
 {% endhint %}
 
 {% tabs %}
 {% tab title="cURL" %}
-```text
+```
 curl -u sak_XXXXXXX: \
 -H "Content-Type: application/json" \
 -X POST \
@@ -178,4 +160,3 @@ myWallet.payInvoice(invoiceParams,
 {% hint style="danger" %}
 The `Content-Type: application/json` header is required for all `POST` request with a JSON body!
 {% endhint %}
-

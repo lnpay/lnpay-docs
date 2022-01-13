@@ -5,33 +5,19 @@ description: Get a list of all transactions across all wallets
 # List All Transactions
 
 {% hint style="info" %}
-This endpoint is only available to the **Secret Access Key \(`sak_`\)**
+This endpoint is only available to the **Secret Access Key (`sak_`)**
 {% endhint %}
 
-{% api-method method="get" host="https://api.lnpay.co/" path="v1/wallet-transactions" %}
-{% api-method-summary %}
-ListTransactions
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.lnpay.co/" path="v1/wallet-transactions" method="get" summary="ListTransactions" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
+{% swagger-parameter in="path" name="wallet_id" type="string" %}
+e.g. wal_
+{% endswagger-parameter %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="wallet\_id" type="string" required=false %}
-e.g. wal\_
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Array of transactions successfully retrieved, sorted by time created descending
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Array of transactions successfully retrieved, sorted by time created descending" %}
 ```
 # WalletTransaction objects
 
@@ -140,10 +126,8 @@ Array of transactions successfully retrieved, sorted by time created descending
     }
 ]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% hint style="info" %}
 the `lntx` field will be `null` if the transaction is a transfer
@@ -157,7 +141,7 @@ the `lntx` field will be `null` if the transaction is a transfer
 
 {% tabs %}
 {% tab title="cURL" %}
-```text
+```
 curl -u sak_XXXXXXX: \
 https://api.lnpay.co/v1/wallet-transactions
 ```
@@ -187,4 +171,3 @@ print(transactions)
 ```
 {% endtab %}
 {% endtabs %}
-

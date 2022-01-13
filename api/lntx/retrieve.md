@@ -6,30 +6,16 @@ description: >-
 
 # Get Invoice Status
 
-{% api-method method="get" host="https://api.lnpay.co" path="/v1/lntx/:lntx\_id" %}
-{% api-method-summary %}
-GetLnTxObject
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.lnpay.co" path="/v1/lntx/:lntx_id" method="get" summary="GetLnTxObject" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
+{% swagger-parameter in="path" name="id" type="string" %}
+e.g. lntx_82yveCX2Wn0EkkdyzvyBv
+{% endswagger-parameter %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" required=true %}
-e.g. lntx\_82yveCX2Wn0EkkdyzvyBv
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-The LnTx Object
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="The LnTx Object" %}
 ```javascript
 {
     "id":"lntx_82yveCX2Wn0EkkdyzvyBv",
@@ -52,14 +38,12 @@ The LnTx Object
     "passThru":null
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% tabs %}
 {% tab title="curl" %}
-```text
+```
 curl -u sak_XXX: \
 https://api.lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv
 ```
@@ -106,11 +90,9 @@ const getInvoice = await lnpay.getInvoice({
 {% hint style="success" %}
 Slim down the response size by appending the fields you want as query parameters
 
-```text
+```
 $ curl -u sak_XXXX: \
 https://api.lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv?fields=settled,num_satoshis
 ```
 {% endhint %}
-
-
 

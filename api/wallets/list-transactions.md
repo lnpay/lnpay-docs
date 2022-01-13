@@ -4,31 +4,21 @@ description: Get transactions for a particular wallet
 
 # List Wallet Transactions
 
-{% api-method method="get" host="https://api.lnpay.co/" path="v1/wallet/:wallet\_key/transactions" %}
-{% api-method-summary %}
-ListWalletTransactions
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.lnpay.co/" path="v1/wallet/:wallet_key/transactions" method="get" summary="ListWalletTransactions" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
+{% swagger-parameter in="path" name="wallet_key" type="string" %}
+wal_ for server side
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="wallet\_key" type="string" required=false %}
-wal\_ for server side  
-waka\_ for client side
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
+\
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Array of transactions successfully retrieved, sorted by time created descending
-{% endapi-method-response-example-description %}
 
+waka_ for client side
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Array of transactions successfully retrieved, sorted by time created descending" %}
 ```
 # WalletTransaction objects
 
@@ -137,10 +127,8 @@ Array of transactions successfully retrieved, sorted by time created descending
     }
 ]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% hint style="info" %}
 the `lntx` field will be `null` if the transaction is a transfer
@@ -154,7 +142,7 @@ the `lntx` field will be `null` if the transaction is a transfer
 
 {% tabs %}
 {% tab title="cURL" %}
-```text
+```
 curl -u sak_XXXXXXX: \
 https://api.lnpay.co/v1/wallet/wal_XXXXXXX/transactions
 ```
@@ -174,4 +162,3 @@ myWallet.getTransactions(queryParams,
 ```
 {% endtab %}
 {% endtabs %}
-

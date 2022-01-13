@@ -6,54 +6,40 @@ description: >-
 
 # Permanent LNURL-withdraw
 
-{% api-method method="get" host="https://api.lnpay.co/v1/wallet" path="/:wallet\_key/lnurl/withdraw-static" %}
-{% api-method-summary %}
-GetLnurlWalletWithdrawStatic
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.lnpay.co/v1/wallet" path="/:wallet_key/lnurl/withdraw-static" method="get" summary="GetLnurlWalletWithdrawStatic" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
+{% swagger-parameter in="path" name="wallet_key" type="string" %}
+wal_ for server side
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="wallet\_key" type="string" required=true %}
-wal\_ for server side  
-waka\_ for client side
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+\
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="memo" type="string" required=false %}
+
+waka_ for client side
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="memo" type="string" %}
 default memo to always show
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="num\_satoshis" type="number" required=false %}
+{% swagger-parameter in="query" name="num_satoshis" type="number" %}
 default withdrawal amount
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="passThru" type="string" required=false %}
+{% swagger-parameter in="query" name="passThru" type="string" %}
 base64 encoded json data to pass along
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Permanent LNURL generated
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Permanent LNURL generated" %}
 ```
 {
     "lnurl" : "LNURL1DP68GUP69UHKCMNSV9UJUMR0VDSKCW3CXYCNZTMKXYHHWCTVD3JHGTMHV94KCA6L23XX27JCDAA82M2R0F8XKV6FF9HXVVMTX9F8XU30D3H82UNV94C8YMMRV4EHX0MWW4K47UMPW3HHX6RFWV7NYFNDV4KK702EDAXX7DJTWCJ"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% hint style="danger" %}
 These LNURLs allow unlimited access to withdrawing from the wallet!
@@ -61,10 +47,9 @@ These LNURLs allow unlimited access to withdrawing from the wallet!
 
 {% tabs %}
 {% tab title="cURL" %}
-```text
+```
 curl -u sak_XXXXXXX: \
 "https://api.lnpay.co/v1/wallet/waka_XXXXXXXXX/lnurl/withdraw-static?num_satoshis=3"
 ```
 {% endtab %}
 {% endtabs %}
-

@@ -4,49 +4,37 @@ description: This section describes how to transfer sats between wallets within 
 
 # Transfers Between Wallets
 
-{% api-method method="post" host="https://api.lnpay.co/" path="v1/wallet/:wallet\_key/transfer" %}
-{% api-method-summary %}
-PostWalletTransfer
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.lnpay.co/" path="v1/wallet/:wallet_key/transfer" method="post" summary="PostWalletTransfer" %}
+{% swagger-description %}
 Transfer satoshis from source wallet to destination wallet
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="wallet\_key" type="string" required=true %}
-wal\_ for server side  
-waka\_ for client side
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% swagger-parameter in="path" name="wallet_key" type="string" %}
+wal_ for server side
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="dest\_wallet\_id" type="string" required=true %}
-destination wallet\_id
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="num\_satoshis" type="number" required=true %}
+
+waka_ for client side
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="dest_wallet_id" type="string" %}
+destination wallet_id
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="num_satoshis" type="number" %}
 sats for this transfer
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="memo" type="string" required=false %}
+{% swagger-parameter in="body" name="memo" type="string" %}
 memo note for this transfer
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="lnPayParams" type="array" required=false %}
+{% swagger-parameter in="body" name="lnPayParams" type="array" %}
 JSON array of custom data to pass thru
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Transfer executed
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Transfer executed" %}
 ```
 {
     "wtx_transfer_in": {
@@ -109,13 +97,9 @@ Transfer executed
     }
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Error reported
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="Error reported" %}
 ```
 {
     "name":"Bad Request",
@@ -124,14 +108,12 @@ Error reported
     "status":400
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% tabs %}
 {% tab title="cURL" %}
-```text
+```
 curl -u sak_XXXXXXX: \
 -H "Content-Type: application/json" \
 -X POST \
@@ -188,4 +170,3 @@ myWallet.internalTransfer(transferParams,
 ```
 {% endtab %}
 {% endtabs %}
-

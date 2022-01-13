@@ -1,34 +1,20 @@
 # QueryRoutes
 
-{% api-method method="get" host="https://api.lnpay.co" path="/v1/node/default/payments/queryroutes" %}
-{% api-method-summary %}
-Get QueryRoutes
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.lnpay.co" path="/v1/node/default/payments/queryroutes" method="get" summary="Get QueryRoutes" %}
+{% swagger-description %}
 This endpoint allows you to probe a route to see the fee and if the destination pubkey is reachable
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="pub\_key" type="string" required=true %}
+{% swagger-parameter in="query" name="pub_key" type="string" %}
 destination pub key
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="amt" type="number" required=true %}
+{% swagger-parameter in="query" name="amt" type="number" %}
 amount in sats
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Route found! Here are the details
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="Route found! Here are the details" %}
+```
 {
     "routes": [
         {
@@ -62,14 +48,10 @@ Route found! Here are the details
     "successProb": 0.9025
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-An error returned as to why the route was unavailable
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="400" description="An error returned as to why the route was unavailable" %}
+```
 {
     "name": "Bad Request",
     "message": "unable to find a path to destination",
@@ -77,17 +59,14 @@ An error returned as to why the route was unavailable
     "status": 400
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% tabs %}
 {% tab title="cURL" %}
-```text
+```
 curl -u sak_XXXX: \
 "https://api.lnpay.co/v1/node/default/payments/queryroutes?pub_key=02c16cca44562b590dd279c942200bdccfd4f990c3a69fad620c10ef2f8228eaff&amt=10"
 ```
 {% endtab %}
 {% endtabs %}
-

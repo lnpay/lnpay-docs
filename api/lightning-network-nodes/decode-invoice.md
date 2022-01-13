@@ -4,30 +4,16 @@ description: Decode an invoice and get route hints. Uses LNPay.co node
 
 # Decode Invoice
 
-{% api-method method="get" host="https://api.lnpay.co" path="/v1/node/default/payments/decodeinvoice" %}
-{% api-method-summary %}
-DecodeInvoice
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.lnpay.co" path="/v1/node/default/payments/decodeinvoice" method="get" summary="DecodeInvoice" %}
+{% swagger-description %}
 Using an LND node
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="payment\_request" type="string" %}
+{% swagger-parameter in="query" name="payment_request" type="string" %}
 Payment request lnbc...
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Decoded invoice
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Decoded invoice" %}
 ```
 {
     "destination":"02c16cca44562b590dd279c942200bdccfd4f990c3a69fad620c10ef2f8228eaff",
@@ -67,17 +53,14 @@ Decoded invoice
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% tabs %}
 {% tab title="curl" %}
-```text
+```
 curl -u sak_XXXX: \
 https://api.lnpay.co/v1/node/default/payments/decodeinvoice?payment_request=lnbc690n1p0ydkfdpp55gpdd7dx0vp9n0jylsvpp0lj....
 ```
 {% endtab %}
 {% endtabs %}
-

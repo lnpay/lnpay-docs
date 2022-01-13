@@ -7,57 +7,51 @@ description: >-
 
 # Disposable LNURL-withdraw
 
-{% api-method method="get" host="https://api.lnpay.co/v1/wallet" path="/:wallet\_key/lnurl/withdraw" %}
-{% api-method-summary %}
-GetWalletLnurlWithdraw
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.lnpay.co/v1/wallet" path="/:wallet_key/lnurl/withdraw" method="get" summary="GetWalletLnurlWithdraw" %}
+{% swagger-description %}
 Generate a disposable LNURL-withdraw link. 
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="wallet\_key" type="string" required=true %}
-wal\_ for server side  
-waka\_ for client side
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% swagger-parameter in="path" name="wallet_key" type="string" %}
+wal_ for server side
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="passThru" type="string" required=false %}
+\
+
+
+waka_ for client side
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="passThru" type="string" %}
 base64 encoded json of data to use in webhooks, etc
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="memo" type="string" required=false %}
+{% swagger-parameter in="query" name="memo" type="string" %}
 memo for the invoice
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="num\_satoshis" type="integer" required=false %}
-Max number of satoshis this LNURL is good for.   
-  
+{% swagger-parameter in="query" name="num_satoshis" type="integer" %}
+Max number of satoshis this LNURL is good for. 
+
+\
+
+
+
+
+\
+
+
 If blank max wallet balance is used
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-LNURL generated
-{% endapi-method-response-example-description %}
-
-```text
+{% swagger-response status="200" description="LNURL generated" %}
+```
 {
     "lnurl":"LNURL1DP68GURN8GHJ7MRWWPSHJTNRDUHHVVF0W4EK2U30WASKCMR9WSHHWC2LFACXUM35DDR5736ZF4HXVS6VGEV8GU6YDE49GC30D3H82UNV94C8YMMRV4EHX0M0W36R66MGD95KS4JGFADRS4ZRFEXK2SN2FFUXUSMHFA98XDZ8D3T9SDECWVHR43"
     "ott":"Y4J9"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% hint style="info" %}
 Note: These LNURLs are ONE-TIME use. This is to prevent repeated access to the wallet.
@@ -102,4 +96,3 @@ print(lnurl_link)
 ```
 {% endtab %}
 {% endtabs %}
-

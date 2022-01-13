@@ -1,34 +1,28 @@
 # Create Wallet
 
-{% api-method method="post" host="https://api.lnpay.co/" path="v1/wallet" %}
-{% api-method-summary %}
-PostCreateWallet
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.lnpay.co/" path="v1/wallet" method="post" summary="PostCreateWallet" %}
+{% swagger-description %}
 Create a new wallet and corresponding access keys
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="user\_label" type="string" required=true %}
+{% swagger-parameter in="body" name="user_label" type="string" %}
 An internal identifier for this wallet
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="ln\_node\_id" type="string" required=false %}
-The LN node that this wallet will send/receive from  
-**Default:** LNPay custodial
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter in="body" name="ln_node_id" type="string" %}
+The LN node that this wallet will send/receive from
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Returns: `Wallet`
-{% endapi-method-response-example-description %}
+\
 
+
+
+
+**Default:**
+
+ LNPay custodial
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Returns: Wallet" %}
 ```
 {
     "id":"wal_czDztN5eJ4r5sJ",
@@ -45,7 +39,23 @@ Returns: `Wallet`
     "walletType":{
         "name":"generic_wallet",
         "display_name":"Generic Wallet"
-    }
+    },
+    "defaultLnurlpay": {
+        "id": "lnurlp_6Xh2hELFFqSlKEHCbF",
+        "created_at": 1642013336,
+        "updated_at": 1642013336,
+        "user_label": "Base lnurl-pay link",
+        "lnurl_encoded": "LNURL1DP68GUP69UHKCMNSV9UJUMR0VDSKCW3CXYCNZTMKXYHHWCTVD3JHGTMHV94KCUZLX3TXC7NYWF5KYN34VE2YZKR42E3KJ6E4V4XKCNP0D3H82UNVWQHKCMN4WFK8QHEKTP5RY6Z9F3RYVU2ND3952JZRVFRQWUZJNJ",
+        "lnurl_decoded": "https://cloud.lnpay.co/v1/wallet/waklp_4VlzdribN5fTAXuVcik5eMlL/lnurlp/lnurlp_6Xh2hELFFqSlKEHCbF",
+        "lnurlp_minSendable_msat": 1000,
+        "lnurlp_maxSendable_msat": 10000000,
+        "lnurlp_short_desc": "LNURL PAY (via LNPay.co)",
+        "statusType": {
+            "type": "lnurl",
+            "name": "lnurl_active",
+            "display_name": "LNURL Active"
+        }
+    },
     "access_keys": {
         "Wallet Admin": [
             "waka_UggociEGwiYpdRu2ijPGvpZU"
@@ -62,14 +72,12 @@ Returns: `Wallet`
     }
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% tabs %}
 {% tab title="cURL" %}
-```text
+```
 curl -u sak_XXXXXXX: \
 -H "Content-Type: application/json" \
 -X POST \
@@ -105,6 +113,4 @@ new_wallet = lnpay_py.create_wallet(wallet_params)
 {% hint style="warning" %}
 The access keys generated will NOT be available via the API again! You must save and store them
 {% endhint %}
-
-
 
