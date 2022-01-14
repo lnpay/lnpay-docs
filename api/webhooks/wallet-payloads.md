@@ -24,7 +24,8 @@
             "display_name":"Generic Wallet"
          },
          "balance_msat":null,
-         "default_lnurlpay_id":"lnurlp_6Xh2hELFFqSlKEHCbF",
+         "default_lnurlpay_id":"lnurlp_6Xh2hELFFqSlKEHCbF"
+      },
       "lnTx":{
          "id":"lntx_TXRORc6kW2rBT0hqJlkoQw",
          "memo":"",
@@ -98,7 +99,8 @@
             "display_name":"Generic Wallet"
          },
          "balance_msat":null,
-         "default_lnurlpay_id":"lnurlp_6Xh2hELFFqSlKEHCbF",
+         "default_lnurlpay_id":"lnurlp_6Xh2hELFFqSlKEHCbF"
+      },
       "lnTx":{
          "id":"lntx_DJ9vcRuzNH4ijb4T7hIOurr9",
          "memo":"keysend/amp: custom record [] []",
