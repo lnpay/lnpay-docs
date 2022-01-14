@@ -28,6 +28,7 @@ This endpoint is only available to the **Secret Access Key (`sak_`)**
             "name":"generic_wallet",
             "display_name":"Generic Wallet"
         },
+        "default_lnurlpay_id":"lnurlp_6Xh2hELFFqSlKEHCbF"
     },
     {
         "id":"wal_czDztN5eJ4r5sJ",
@@ -44,7 +45,8 @@ This endpoint is only available to the **Secret Access Key (`sak_`)**
         "walletType":{
             "name":"generic_wallet",
             "display_name":"Generic Wallet"
-        }
+        },
+        "default_lnurlpay_id":"lnurlp_6Xh2hELFFqSlKEHCbF"
     }
 ]
 ```

@@ -24,23 +24,7 @@
             "display_name":"Generic Wallet"
          },
          "balance_msat":null,
-         "defaultLnurlpay":{
-            "id":"lnurlp_QYmSeHiSev5PDqa2RY",
-            "created_at":1642107738,
-            "statusType":{
-               "name":"lnurl_active",
-               "type":"lnurl",
-               "display_name":"LNURL Active"
-            },
-            "updated_at":1642107738,
-            "user_label":"Base lnurl-pay link",
-            "lnurl_decoded":"https://cloud.lnpay.co/v1/wallet/waklp_0C9ezQHHMQ0z77VU5dpIfB/lnurlp/lnurlp_QYmSeHiSev5PDqa2RY",
-            "lnurl_encoded":"LNURL1DP68GURN8GHJ7CMVDA6KGTNVDECXZ7FWVDHJ7A339AMKZMRVV46Z7AMPDDK8QHESGVUK27J3FPYY65FS0GMNW4J4X4J8QJTXGGHKCMN4WFK8QTMVDE6HYMRSTAG4JM2NV4YXJ5M9WC64Q3R3VYE9YKGHJXE2D",
-            "lnurlp_short_desc":"LNURL PAY (via LNPay.co)",
-            "lnurlp_maxSendable_msat":100000000,
-            "lnurlp_minSendable_msat":1000
-         }
-      },
+         "default_lnurlpay_id":"lnurlp_6Xh2hELFFqSlKEHCbF",
       "lnTx":{
          "id":"lntx_TXRORc6kW2rBT0hqJlkoQw",
          "memo":"",
@@ -114,23 +98,7 @@
             "display_name":"Generic Wallet"
          },
          "balance_msat":null,
-         "defaultLnurlpay":{
-            "id":"lnurlp_ZfSjSf4RJLi4RyKkmM",
-            "created_at":1642011549,
-            "statusType":{
-               "name":"lnurl_active",
-               "type":"lnurl",
-               "display_name":"LNURL Active"
-            },
-            "updated_at":1642011549,
-            "user_label":"Base lnurl-pay link",
-            "lnurl_decoded":"https://cloud.lnpay.co/v1/wallet/waklp_fnCwh1bPoi7PVjuBqt8L0/lnurlp/lnurlp_ZfSjSf4RJLi4RyKkmM",
-            "lnurl_encoded":"LNURL1DP68GURN8GHJ7CMVDA6KGTNVDECXZ7FWVDHJ7A339AMKZMRVV46Z7AMPDDK8QHMXDEPHW6P3VFGX76FH2PTX5A2ZW96RSNPS9AKXUATJD3CZ7MRWW4EXCUZLTFN9X6JNVC69YJJVDY69Y72TDDK56H67NX6",
-            "lnurlp_short_desc":"LNURL PAY (via LNPay.co)",
-            "lnurlp_maxSendable_msat":10000000,
-            "lnurlp_minSendable_msat":1000
-         }
-      },
+         "default_lnurlpay_id":"lnurlp_6Xh2hELFFqSlKEHCbF",
       "lnTx":{
          "id":"lntx_DJ9vcRuzNH4ijb4T7hIOurr9",
          "memo":"keysend/amp: custom record [] []",
@@ -198,22 +166,7 @@
          "display_name":"Generic Wallet"
       },
       "balance_msat":null,
-      "defaultLnurlpay":{
-         "id":"lnurlp_QYmSeHiSev5PDqa2RY",
-         "created_at":1642107738,
-         "statusType":{
-            "name":"lnurl_active",
-            "type":"lnurl",
-            "display_name":"LNURL Active"
-         },
-         "updated_at":1642107738,
-         "user_label":"Base lnurl-pay link",
-         "lnurl_decoded":"https://cloud.lnpay.co/v1/wallet/waklp_0C9ezQHHMQ0z77VU5dpIfB/lnurlp/lnurlp_QYmSeHiSev5PDqa2RY",
-         "lnurl_encoded":"LNURL1DP68GURN8GHJ7CMVDA6KGTNVDECXZ7FWVDHJ7A339AMKZMRVV46Z7AMPDDK8QHESGVUK27J3FPYY65FS0GMNW4J4X4J8QJTXGGHKCMN4WFK8QTMVDE6HYMRSTAG4JM2NV4YXJ5M9WC64Q3R3VYE9YKGHJXE2D",
-         "lnurlp_short_desc":"LNURL PAY (via LNPay.co)",
-         "lnurlp_maxSendable_msat":100000000,
-         "lnurlp_minSendable_msat":1000
-      }
+      "default_lnurlpay_id":"lnurlp_6Xh2hELFFqSlKEHCbF"
    }
 }
 ```
@@ -244,22 +197,7 @@
             "display_name":"Generic Wallet"
          },
          "balance_msat":null,
-         "defaultLnurlpay":{
-            "id":"lnurlp_QYmSeHiSev5PDqa2RY",
-            "created_at":1642107738,
-            "statusType":{
-               "name":"lnurl_active",
-               "type":"lnurl",
-               "display_name":"LNURL Active"
-            },
-            "updated_at":1642107738,
-            "user_label":"Base lnurl-pay link",
-            "lnurl_decoded":"https://cloud.lnpay.co/v1/wallet/waklp_0C9ezQHHMQ0z77VU5dpIfB/lnurlp/lnurlp_QYmSeHiSev5PDqa2RY",
-            "lnurl_encoded":"LNURL1DP68GURN8GHJ7CMVDA6KGTNVDECXZ7FWVDHJ7A339AMKZMRVV46Z7AMPDDK8QHESGVUK27J3FPYY65FS0GMNW4J4X4J8QJTXGGHKCMN4WFK8QTMVDE6HYMRSTAG4JM2NV4YXJ5M9WC64Q3R3VYE9YKGHJXE2D",
-            "lnurlp_short_desc":"LNURL PAY (via LNPay.co)",
-            "lnurlp_maxSendable_msat":100000000,
-            "lnurlp_minSendable_msat":1000
-         }
+         "default_lnurlpay_id":"lnurlp_6Xh2hELFFqSlKEHCbF"
       },
       "lnTx":{
          "id":"lntx_xd102sPOytDpUr2WadQALB",
@@ -328,22 +266,7 @@
             "display_name":"Generic Wallet"
          },
          "balance_msat":null,
-         "defaultLnurlpay":{
-            "id":"lnurlp_QYmSeHiSev5PDqa2RY",
-            "created_at":1642107738,
-            "statusType":{
-               "name":"lnurl_active",
-               "type":"lnurl",
-               "display_name":"LNURL Active"
-            },
-            "updated_at":1642107738,
-            "user_label":"Base lnurl-pay link",
-            "lnurl_decoded":"https://cloud.lnpay.co/v1/wallet/waklp_0C9ezQHHMQ0z77VU5dpIfB/lnurlp/lnurlp_QYmSeHiSev5PDqa2RY",
-            "lnurl_encoded":"LNURL1DP68GURN8GHJ7CMVDA6KGTNVDECXZ7FWVDHJ7A339AMKZMRVV46Z7AMPDDK8QHESGVUK27J3FPYY65FS0GMNW4J4X4J8QJTXGGHKCMN4WFK8QTMVDE6HYMRSTAG4JM2NV4YXJ5M9WC64Q3R3VYE9YKGHJXE2D",
-            "lnurlp_short_desc":"LNURL PAY (via LNPay.co)",
-            "lnurlp_maxSendable_msat":100000000,
-            "lnurlp_minSendable_msat":1000
-         }
+         "default_lnurlpay_id":"lnurlp_6Xh2hELFFqSlKEHCbF"
       },
       "lnTx":null,
       "wtxType":{
@@ -392,22 +315,7 @@
             "display_name":"Generic Wallet"
          },
          "balance_msat":null,
-         "defaultLnurlpay":{
-            "id":"lnurlp_nmcfM4D05e0seKa0Hx",
-            "created_at":1642008335,
-            "statusType":{
-               "name":"lnurl_active",
-               "type":"lnurl",
-               "display_name":"LNURL Active"
-            },
-            "updated_at":1642008335,
-            "user_label":null,
-            "lnurl_decoded":"https://cloud.lnpay.co/v1/wallet/waklp_TYrGPDTllBg86Su8rivoRMkX/lnurlp/lnurlp_nmcfM4D05e0seKa0Hx",
-            "lnurl_encoded":"LNURL1DP68GURN8GHJ7CMVDA6KGTNVDECXZ7FWVDHJ7A339AMKZMRVV46Z7AMPDDK8QH65T9EYW5ZY23KXCSN88QM9XAFCWF5HVM6JF444STMVDE6HYMRS9AKXUATJD3C97MNDVDNY6DZYXQ6K2VRNV49KZVZG0Q399X49",
-            "lnurlp_short_desc":"LNURL PAY (via LNPay.co)",
-            "lnurlp_maxSendable_msat":100000000,
-            "lnurlp_minSendable_msat":1000
-         }
+         "default_lnurlpay_id":"lnurlp_6Xh2hELFFqSlKEHCbF"
       },
       "lnTx":null,
       "wtxType":{

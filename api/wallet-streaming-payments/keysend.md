@@ -151,7 +151,8 @@ If set to 1, the keysend request will be asynchronously processed. An immediate 
 {% swagger-response status="201" description="Keysend Sent!" %}
 ```
 {
-   "id":"382883"
+   "id":"382883",
+   "success":"1"
 }
 ```
 {% endswagger-response %}
