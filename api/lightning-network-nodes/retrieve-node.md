@@ -1,13 +1,17 @@
-# List Nodes
+# Retrieve Node
 
-{% swagger method="get" path="v1/nodes" baseUrl="https://api.lnpay.co/" summary="List Lightning Nodes tied to this account" %}
+{% swagger method="get" path="/v1/node/:ln_node_id" baseUrl="https://api.lnpay.co" summary="Retrieve LN Node" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
+{% swagger-parameter in="path" name="ln_node_id" %}
+e.g. lnod_XXXX
+{% endswagger-parameter %}
+
 {% swagger-response status="200: OK" description="" %}
 ```javascript
-[{
+{
     "id": "lnod_bkdaitqin2l54cbuvq",
     "created_at": 1640704004,
     "alias": "alice",
@@ -27,8 +31,7 @@
     "passThru": {
         "rest_last_check": 1640707773
     }
-}]
+}
 ```
 {% endswagger-response %}
 {% endswagger %}
-

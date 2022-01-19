@@ -37,6 +37,7 @@
   * [Pay to lnurlpay](api/lnurl-pay/pay-to-lnurlpay.md)
 * [Lightning Network Nodes](api/lightning-network-nodes/README.md)
   * [List Nodes](api/lightning-network-nodes/list-nodes.md)
+  * [Retrieve Node](api/lightning-network-nodes/retrieve-node.md)
   * [QueryRoutes](api/lightning-network-nodes/query-routes.md)
   * [Decode Invoice](api/lightning-network-nodes/decode-invoice.md)
 * [Webhooks](api/webhooks/README.md)
