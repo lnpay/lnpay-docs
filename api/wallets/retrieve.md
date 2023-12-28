@@ -4,18 +4,14 @@ description: Get the wallet object which includes current balance. See Access Ke
 
 # Retrieve Wallet
 
-{% swagger baseUrl="https://api.lnpay.co/" path="v1/wallet/:wallet_key" method="get" summary="GetWallet" %}
+{% swagger baseUrl="https://<yourdomain>/" path="v1/wallet/:wallet_key" method="get" summary="GetWallet" %}
 {% swagger-description %}
 Returns info about the wallet, including balance.
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="wallet_key" type="string" %}
-wal_ for server side
-
-\
-
-
-wakr_ for client side
+wal\_ for server side\
+wakr\_ for client side
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Returns: Wallet" %}
@@ -50,7 +46,7 @@ See the [Access Keys](../get-started/access-keys.md#permission-breakdown) sectio
 {% tab title="cURL" %}
 ```
 curl -u sak_XXXXXXX: \
-https://api.lnpay.co/v1/wallet/wal_XXXXXX
+https://<yourdomain>/v1/wallet/wal_XXXXXX
 ```
 {% endtab %}
 

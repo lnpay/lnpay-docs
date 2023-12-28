@@ -6,13 +6,13 @@ description: >-
 
 # Get Invoice Status
 
-{% swagger baseUrl="https://api.lnpay.co" path="/v1/lntx/:lntx_id" method="get" summary="GetLnTxObject" %}
+{% swagger baseUrl="https://<yourdomain>" path="/v1/lntx/:lntx_id" method="get" summary="GetLnTxObject" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="id" type="string" %}
-e.g. lntx_82yveCX2Wn0EkkdyzvyBv
+e.g. lntx\_82yveCX2Wn0EkkdyzvyBv
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="The LnTx Object" %}
@@ -45,7 +45,7 @@ e.g. lntx_82yveCX2Wn0EkkdyzvyBv
 {% tab title="curl" %}
 ```
 curl -u sak_XXX: \
-https://api.lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv
+https://<yourdomain>/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv
 ```
 {% endtab %}
 
@@ -92,7 +92,7 @@ Slim down the response size by appending the fields you want as query parameters
 
 ```
 $ curl -u sak_XXXX: \
-https://api.lnpay.co/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv?fields=settled,num_satoshis
+https://<yourdomain>/v1/lntx/lntx_82yveCX2Wn0EkkdyzvyBv?fields=settled,num_satoshis
 ```
 {% endhint %}
 

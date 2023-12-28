@@ -1,25 +1,16 @@
 # Create Wallet
 
-{% swagger baseUrl="https://api.lnpay.co/" path="v1/wallet" method="post" summary="PostCreateWallet" %}
+{% swagger baseUrl="https://<yourdomain>/" path="v1/wallet" method="post" summary="PostCreateWallet" %}
 {% swagger-description %}
 Create a new wallet and corresponding access keys
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="user_label" type="string" %}
-An internal identifier for this wallet
+An internal description for this wallet
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="ln_node_id" type="string" %}
 The LN node that this wallet will send/receive from
-
-\
-
-
-
-
-**Default:**
-
- LNPay custodial
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Returns: Wallet" %}
@@ -67,7 +58,7 @@ curl -u sak_XXXXXXX: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"user_label":"Tester API Wallet"}' \
-https://api.lnpay.co/v1/wallet
+https://<yourdomain>/v1/wallet
 ```
 {% endtab %}
 

@@ -1,12 +1,12 @@
 # Retrieve Node
 
-{% swagger method="get" path="/v1/node/:ln_node_id" baseUrl="https://api.lnpay.co" summary="Retrieve LN Node" %}
+{% swagger method="get" path="/v1/node/:ln_node_id" baseUrl="https://<yourdomain>" summary="Retrieve LN Node" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="ln_node_id" %}
-e.g. lnod_XXXX
+e.g. lnod\_XXXX
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="" %}

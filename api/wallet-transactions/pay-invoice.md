@@ -4,18 +4,14 @@ description: Generate an LN invoice from the specified wallet
 
 # Pay Invoice
 
-{% swagger baseUrl="https://api.lnpay.co/" path="v1/wallet/:wallet_key/withdraw" method="post" summary="PostWalletSend" %}
+{% swagger baseUrl="https://<yourdomain>/" path="v1/wallet/:wallet_key/withdraw" method="post" summary="PostWalletSend" %}
 {% swagger-description %}
 Pay an invoice from this wallet
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="wallet_key" type="string" %}
-wal_ for server side
-
-\
-
-
-waka_ for client side
+wal\_ for server side\
+waka\_ for client side
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="fee_limit_msat" type="number" %}
@@ -108,7 +104,7 @@ curl -u sak_XXXXXXX: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"payment_request":"lnbc50n1p0qjf84p..."}' \
-https://api.lnpay.co/v1/wallet/wal_XXXXX/withdraw
+https://<yourdomain>/v1/wallet/wal_XXXXX/withdraw
 ```
 {% endtab %}
 

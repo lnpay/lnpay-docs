@@ -32,33 +32,16 @@ The purpose of these keys are to restrict use with client side applications. Bro
 | Wallet Invoice        | waki\_  | <p>wallet_deposit</p><p>wallet_<em>tx</em>_read</p>                                                               | waki\_oSjzkjVR...  |                                                         |
 | Wallet Read           | wakr\_  | <p>wallet_read</p><p>wallet_<em>tx</em>_read</p>                                                                  | wakr\_h1JTla...    |                                                         |
 | Wallet LNURL Withdraw | waklw\_ | <p>wallet_<em>public</em>_withdraw</p><p>wallet_read</p><p>wallet_withdraw</p>                                    | waklw\_1Lldqo...   | This key does not need an API key in order to withdraw! |
+| Wallet LNURL Pay      | waklp\_ | wallet\_deposit                                                                                                   | waklp\_Hh3u23..... | This is only for RECEIVING lnurlpay requests            |
 
 ## Permission Breakdown
 
 {% tabs %}
-{% tab title="Server Side " %}
-This table breaks down when it is appropriate to use the API Key and Wallet Key combo
-
-```
-https://api.lnpay.co/v1/<Wallet Key>?access-token=<API Key>
-```
-
-| Function                                                       | API Key |    Wallet Key   |
-| -------------------------------------------------------------- | :-----: | :-------------: |
-| [Create Wallet](../wallets/create.md)                          |  `sak_` |       N/A       |
-| [Retrieve Wallet](../wallets/retrieve.md)                      |  `sak_` |      `wal_`     |
-| [Generate Invoice](../wallet-transactions/generate-invoice.md) |  `sak_` |      `wal_`     |
-| [Pay Invoice](../wallet-transactions/pay-invoice.md)           |  `sak_` |      `wal_`     |
-| [Keysend](../wallet-streaming-payments/keysend.md)             |  `sak_` |      `wal_`     |
-| [Transfer](../wallet-transactions/transfers.md)                |  `sak_` |      `wal_`     |
-| [Transactions](../wallet-transactions/)                        |  `sak_` | `wal_` optional |
-{% endtab %}
-
 {% tab title="Client Side" %}
 This table breaks down when it is appropriate to use the API Key and Wallet Key combo
 
 ```
-https://api.lnpay.co/v1/<Wallet Key>?access-token=<API Key>
+https://<yourdomain>/v1/<Wallet Key>?access-token=<API Key>
 ```
 
 | Function                                                       | API Key |     Wallet Key    |
@@ -70,6 +53,24 @@ https://api.lnpay.co/v1/<Wallet Key>?access-token=<API Key>
 | [Keysend](../wallet-streaming-payments/keysend.md)             |  `pak_` |      `waka_`      |
 | [Transfer](../wallet-transactions/transfers.md)                |  `pak_` |      `waka_`      |
 | [Wallet Transactions](../wallet-transactions/)                 |  `pak_` | `waka_`or `wakr_` |
+{% endtab %}
+
+{% tab title="Server Side " %}
+This table breaks down when it is appropriate to use the API Key and Wallet Key combo
+
+```
+https://<yourdomain>/v1/<Wallet Key>?access-token=<API Key>
+```
+
+| Function                                                       | API Key |    Wallet Key   |
+| -------------------------------------------------------------- | :-----: | :-------------: |
+| [Create Wallet](../wallets/create.md)                          |  `sak_` |       N/A       |
+| [Retrieve Wallet](../wallets/retrieve.md)                      |  `sak_` |      `wal_`     |
+| [Generate Invoice](../wallet-transactions/generate-invoice.md) |  `sak_` |      `wal_`     |
+| [Pay Invoice](../wallet-transactions/pay-invoice.md)           |  `sak_` |      `wal_`     |
+| [Keysend](../wallet-streaming-payments/keysend.md)             |  `sak_` |      `wal_`     |
+| [Transfer](../wallet-transactions/transfers.md)                |  `sak_` |      `wal_`     |
+| [Transactions](../wallet-transactions/)                        |  `sak_` | `wal_` optional |
 {% endtab %}
 {% endtabs %}
 

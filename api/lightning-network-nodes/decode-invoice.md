@@ -4,7 +4,7 @@ description: Decode an invoice and get route hints. Uses LNPay.co node
 
 # Decode Invoice
 
-{% swagger baseUrl="https://api.lnpay.co" path="/v1/node/default/payments/decodeinvoice" method="get" summary="DecodeInvoice" %}
+{% swagger baseUrl="https://<yourdomain>" path="/v1/node/default/payments/decodeinvoice" method="get" summary="DecodeInvoice" %}
 {% swagger-description %}
 Using an LND node
 {% endswagger-description %}
@@ -60,7 +60,7 @@ Payment request lnbc...
 {% tab title="curl" %}
 ```
 curl -u sak_XXXX: \
-https://api.lnpay.co/v1/node/default/payments/decodeinvoice?payment_request=lnbc690n1p0ydkfdpp55gpdd7dx0vp9n0jylsvpp0lj....
+https://<yourdomain>/v1/node/default/payments/decodeinvoice?payment_request=lnbc690n1p0ydkfdpp55gpdd7dx0vp9n0jylsvpp0lj....
 ```
 {% endtab %}
 {% endtabs %}

@@ -1,18 +1,14 @@
 # Probe
 
-The LNURL-pay ingestion endpoint enables you to "probe" an lnurlpay paylink / lightning address to see its parameters. You can then use this information to determine if you will pay this link.
+The LNURL-pay ingestion endpoint enables you to "probe" a lightning address to see its parameters. You can then use this information to determine if you will pay this link.
 
-{% swagger method="get" path="/v1/lnurlp/probe/:lnurlpay_encoded | :ln_address" baseUrl="https://<yourdomain>" summary="Probe the lnurlpay link / lightning address to get its parameters" %}
+{% swagger method="get" path="/v1/lnurlp/probe/:ln_address" baseUrl="https://<yourdomain>" summary="Probe the lnurlpay link / lightning address to get its parameters" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
-{% swagger-parameter in="path" name="ln_address" %}
+{% swagger-parameter in="path" name="ln_address" required="true" %}
 e.g. fiatjaf@lntxbot.com
-{% endswagger-parameter %}
-
-{% swagger-parameter in="path" name="lnurlpay_encoded" required="false" %}
-e.g. LNURL1DP68GUP69UHKCMNSV9UJUMR0VDSKCW3CXYCNZT....
 {% endswagger-parameter %}
 
 {% swagger-response status="200: OK" description="lnurlpay retrieved details" %}
@@ -38,8 +34,7 @@ e.g. LNURL1DP68GUP69UHKCMNSV9UJUMR0VDSKCW3CXYCNZT....
 {
     "name": "Exception",
     "message": "Invalid bech32 checksum",
-    "code": 0,
-    "type": "lnpay\\wallet\\exceptions\\InvalidLnurlpayLinkException",
+    "code": 0
 }
 ```
 {% endswagger-response %}

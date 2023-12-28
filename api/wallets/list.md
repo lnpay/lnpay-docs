@@ -4,7 +4,7 @@
 This endpoint is only available to the **Secret Access Key (`sak_`)**
 {% endhint %}
 
-{% swagger baseUrl="https://api.lnpay.co/" path="v1/wallets" method="get" summary="ListWallets" %}
+{% swagger baseUrl="https://<yourdomain>/" path="v1/wallets" method="get" summary="ListWallets" %}
 {% swagger-description %}
 
 {% endswagger-description %}

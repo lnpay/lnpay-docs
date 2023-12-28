@@ -4,7 +4,7 @@
 
 ## Guides
 
-* [Outsource App Wallets](guides/outsource-custodial-wallets.md)
+* [Connecting Voltage Node](guides/connecting-voltage-node.md)
 
 ## API
 
@@ -33,7 +33,14 @@
   * [Permanent LNURL-withdraw](api/lnurl-withdraw/permanent-lnurl-withdraw.md)
 * [LNURL-pay](api/lnurl-pay/README.md)
   * [Probe](api/lnurl-pay/probe.md)
-  * [Pay to lnurlpay](api/lnurl-pay/pay-to-lnurlpay.md)
+  * [Pay to lnurl paylink](api/lnurl-pay/pay-to-lnurl-paylink.md)
+  * [Create lnurlpay link](api/lnurl-pay/create-lnurlpay-link.md)
+  * [Update lnurlpay link](api/lnurl-pay/update-lnurlpay-link.md)
+  * [Retrieve lnurlpay](api/lnurl-pay/retrieve-lnurlpay.md)
+* [Lightning Address](api/lightning-address/README.md)
+  * [Probe](api/lightning-address/probe.md)
+  * [Pay to Lightning Address](api/lightning-address/pay-to-lightning-address.md)
+  * [Create Lightning Address](api/lightning-address/create-lightning-address.md)
 * [Lightning Network Nodes](api/lightning-network-nodes/README.md)
   * [List Nodes](api/lightning-network-nodes/list-nodes.md)
   * [Retrieve Node](api/lightning-network-nodes/retrieve-node.md)

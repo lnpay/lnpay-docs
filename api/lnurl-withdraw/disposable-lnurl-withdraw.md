@@ -7,18 +7,14 @@ description: >-
 
 # Disposable LNURL-withdraw
 
-{% swagger baseUrl="https://api.lnpay.co/v1/wallet" path="/:wallet_key/lnurl/withdraw" method="get" summary="GetWalletLnurlWithdraw" %}
+{% swagger baseUrl="https://<yourdomain>/v1/wallet" path="/:wallet_key/lnurl/withdraw" method="get" summary="GetWalletLnurlWithdraw" %}
 {% swagger-description %}
-Generate a disposable LNURL-withdraw link. 
+Generate a disposable LNURL-withdraw link.&#x20;
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="wallet_key" type="string" %}
-wal_ for server side
-
-\
-
-
-waka_ for client side
+wal\_ for server side\
+waka\_ for client side
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="passThru" type="string" %}
@@ -30,16 +26,8 @@ memo for the invoice
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="num_satoshis" type="integer" %}
-Max number of satoshis this LNURL is good for. 
-
+Max number of satoshis this LNURL is good for. \
 \
-
-
-
-
-\
-
-
 If blank max wallet balance is used
 {% endswagger-parameter %}
 
@@ -63,7 +51,7 @@ the `ott` is a One-Time-Token that is encoded in the LNURL and saved by the wall
 {% tab title="curl" %}
 ```bash
 curl -u sak_XXXXXXX: \
-"https://api.lnpay.co/v1/wallet/wal_XXXXXXX/lnurl/withdraw?num_satoshis=3"
+"https://<yourdomain>/v1/wallet/wal_XXXXXXX/lnurl/withdraw?num_satoshis=3"
 ```
 {% endtab %}
 

@@ -6,18 +6,14 @@ description: >-
 
 # Permanent LNURL-withdraw
 
-{% swagger baseUrl="https://api.lnpay.co/v1/wallet" path="/:wallet_key/lnurl/withdraw-static" method="get" summary="GetLnurlWalletWithdrawStatic" %}
+{% swagger baseUrl="https://<yourdomain>/v1/wallet" path="/:wallet_key/lnurl/withdraw-static" method="get" summary="GetLnurlWalletWithdrawStatic" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="wallet_key" type="string" %}
-wal_ for server side
-
-\
-
-
-waka_ for client side
+wal\_ for server side\
+waka\_ for client side
 {% endswagger-parameter %}
 
 {% swagger-parameter in="query" name="memo" type="string" %}
@@ -49,7 +45,7 @@ These LNURLs allow unlimited access to withdrawing from the wallet!
 {% tab title="cURL" %}
 ```
 curl -u sak_XXXXXXX: \
-"https://api.lnpay.co/v1/wallet/waka_XXXXXXXXX/lnurl/withdraw-static?num_satoshis=3"
+"https://<yourdomain>/v1/wallet/waka_XXXXXXXXX/lnurl/withdraw-static?num_satoshis=3"
 ```
 {% endtab %}
 {% endtabs %}

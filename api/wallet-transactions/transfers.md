@@ -4,25 +4,21 @@ description: This section describes how to transfer sats between wallets within 
 
 # Transfers Between Wallets
 
-{% swagger baseUrl="https://api.lnpay.co/" path="v1/wallet/:wallet_key/transfer" method="post" summary="PostWalletTransfer" %}
+{% swagger baseUrl="https://<yourdomain>/" path="v1/wallet/:wallet_key/transfer" method="post" summary="PostWalletTransfer" %}
 {% swagger-description %}
 Transfer satoshis from source wallet to destination wallet
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="wallet_key" type="string" %}
-wal_ for server side
-
-\
-
-
-waka_ for client side
+wal\_ for server side\
+waka\_ for client side
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="dest_wallet_id" type="string" %}
-destination wallet_id
+{% swagger-parameter in="body" name="dest_wallet_id" type="string" required="true" %}
+destination wallet\_id
 {% endswagger-parameter %}
 
-{% swagger-parameter in="body" name="num_satoshis" type="number" %}
+{% swagger-parameter in="body" name="num_satoshis" type="number" required="true" %}
 sats for this transfer
 {% endswagger-parameter %}
 
@@ -118,7 +114,7 @@ curl -u sak_XXXXXXX: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"dest_wallet_id":"wal_XXXX","num_satoshis":1,"memo":"Test transfer"}' \
-https://api.lnpay.co/v1/wallet/wal_XXXXX/transfer
+https://<yourdomain>/v1/wallet/wal_XXXXX/transfer
 ```
 {% endtab %}
 

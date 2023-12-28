@@ -4,18 +4,14 @@ description: Initiate a keysend payment from your wallet to a destination pubkey
 
 # Keysend
 
-{% swagger baseUrl="https://api.lnpay.co" path="/v1/wallet/:wallet_key/keysend" method="post" summary="PostWalletKeysend Synchronous" %}
+{% swagger baseUrl="https://<yourdomain>" path="/v1/wallet/:wallet_key/keysend" method="post" summary="PostWalletKeysend Synchronous" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="wallet_key" type="string" %}
-wal_ for server side
-
-\
-
-
-waka_ for client side
+wal\_ for server side\
+waka\_ for client side
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="num_satoshis" type="integer" %}
@@ -35,7 +31,7 @@ key:value pairs for the onion.
 
 
 
-ex. {"7629169":{"app\_name":"Podcast Player"}}
+ex. {"7629169":{"app\_name":"Podcast Player"\}}
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="passThru" type="object" %}
@@ -106,18 +102,14 @@ data to pass along with this invoice for webhooks (e.g. ticketId, etc)
 {% endswagger-response %}
 {% endswagger %}
 
-{% swagger baseUrl="https://api.lnpay.co" path="/v1/wallet/:wallet_key/keysend" method="post" summary="PostWalletKeysend Asynchronous" %}
+{% swagger baseUrl="https://<yourdomain>" path="/v1/wallet/:wallet_key/keysend" method="post" summary="PostWalletKeysend Asynchronous" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="wallet_key" type="string" %}
-wal_ for server side
-
-\
-
-
-waka_ for client side
+wal\_ for server side\
+waka\_ for client side
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="num_satoshis" type="integer" %}
@@ -137,7 +129,7 @@ key:value pairs for the onion.
 
 
 
-ex. {"7629169":{"app\_name":"Podcast Player"}}
+ex. {"7629169":{"app\_name":"Podcast Player"\}}
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="passThru" type="object" %}
@@ -145,7 +137,7 @@ data to pass along with this invoice for webhooks (e.g. ticketId, etc)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="header" name="X-LNPAY-ASYNC" type="boolean" %}
-If set to 1, the keysend request will be asynchronously processed. An immediate response will returned 
+If set to 1, the keysend request will be asynchronously processed. An immediate response will returned&#x20;
 {% endswagger-parameter %}
 
 {% swagger-response status="201" description="Keysend Sent!" %}
@@ -176,7 +168,7 @@ curl -u sak_XXXXXXX: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"dest_pubkey":"033868c219bdb51a33560d854d500fe7d3898a1ad9e05dd89d0007e11313588500","num_satoshis":2}' \
-https://api.lnpay.co/v1/wallet/waka_XXXXXXX/keysend
+https://<yourdomain>/v1/wallet/waka_XXXXXXX/keysend
 
 # Note we are using the "admin" access_key as denoted by "wa_"
 ```

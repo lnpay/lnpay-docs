@@ -8,13 +8,13 @@ description: Get a list of all transactions across all wallets
 This endpoint is only available to the **Secret Access Key (`sak_`)**
 {% endhint %}
 
-{% swagger baseUrl="https://api.lnpay.co/" path="v1/wallet-transactions" method="get" summary="ListTransactions" %}
+{% swagger baseUrl="https://<yourdomain>/" path="v1/wallet-transactions" method="get" summary="ListTransactions" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="wallet_id" type="string" %}
-e.g. wal_
+e.g. wal\_
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Array of transactions successfully retrieved, sorted by time created descending" %}
@@ -143,7 +143,7 @@ the `lntx` field will be `null` if the transaction is a transfer
 {% tab title="cURL" %}
 ```
 curl -u sak_XXXXXXX: \
-https://api.lnpay.co/v1/wallet-transactions
+https://<yourdomain>/v1/wallet-transactions
 ```
 {% endtab %}
 

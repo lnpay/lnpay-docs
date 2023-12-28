@@ -12,28 +12,28 @@ If no `Content-Type` is specified, the request will be interpreted as Form Data.
 
 {% tabs %}
 {% tab title="curl" %}
-```text
+```
 $ curl -u sak_XXXXXXX: \
 -X POST \
 -d num_satoshis=20 \
 -d memo="Test invoice from the docs" \
-https://api.lnpay.co/v1/user/wallet/wi_XXXXXXX/invoice
+https://<yourdomain>/v1/user/wallet/wi_XXXXXXX/invoice
 ```
 {% endtab %}
 {% endtabs %}
 
 ### JSON
 
-JSON requests **MUST** contain the `Content-Type: application/json` header. Example invoice generation request. 
+JSON requests **MUST** contain the `Content-Type: application/json` header. Example invoice generation request.&#x20;
 
 {% tabs %}
 {% tab title="curl" %}
-```text
+```
 $ curl -u sak_XXXXXXX: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"num_satoshis":20, "memo":"Test invoice from the docs"}' \
-https://api.lnpay.co/v1/user/wallet/wi_XXXXXXXX/invoice
+https://<yourdomain>/v1/user/wallet/wi_XXXXXXXX/invoice
 ```
 {% endtab %}
 {% endtabs %}
@@ -44,9 +44,9 @@ By default the objects are returned with all fields. You can limit the response 
 
 {% tabs %}
 {% tab title="curl" %}
-```text
+```
 $ curl -u sak_XXXXXXX: \
-https://api.lnpay.co/v1/lntx/lntx_XXXXXXX?fields=num_satoshis,settled
+https://<yourdomain>/v1/lntx/lntx_XXXXXXX?fields=num_satoshis,settled
 
 //Response
 
@@ -61,10 +61,9 @@ Most endpoints support pagination if it is a list-based GET request. `page` and 
 
 {% tabs %}
 {% tab title="curl" %}
-```text
+```
 $ curl -u sak_XXXXXXX: \
-https://api.lnpay.co/v1/wallet/wakr_XXXXXX/transactions?page=2&per-page=100
+https://<yourdomain>/v1/wallet/wakr_XXXXXX/transactions?page=2&per-page=100
 ```
 {% endtab %}
 {% endtabs %}
-

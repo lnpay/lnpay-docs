@@ -338,3 +338,45 @@
 ```
 
 </details>
+
+<details>
+
+<summary>Wallet Send Failure</summary>
+
+```
+{
+  "wal": {
+    "id": "wal_ZOBHtYmXdJzVTY",
+    "balance": 93,
+    "created_at": 1642003748,
+    "statusType": {
+      "name": "active",
+      "type": "wallet",
+      "display_name": "Active"
+    },
+    "updated_at": 1643039277,
+    "user_label": "123",
+    "walletType": {
+      "name": "generic_wallet",
+      "display_name": "Generic Wallet"
+    },
+    "balance_msat": null,
+    "default_lnurlpay_id": "lnurlp_24zScIej6hbZv99xJB"
+  },
+  "passThru": {
+    "ticketId": "23"
+  },
+  "spontaneous": 1,
+  "failureReason": "Failure reason: FAILURE_REASON_NO_ROUTE",
+  "node_request_parameters": {
+    "amt_msat": 2000,
+    "dest_pubkey": "033868c219bdb51a33560d854d500fe7d3898a1ad9e05dd89d0007e11313588500",
+    "custom_records": {
+      "696969": "test record"
+    },
+    "fee_limit_msat": 1000
+  }
+}
+```
+
+</details>

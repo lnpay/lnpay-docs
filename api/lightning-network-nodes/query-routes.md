@@ -1,6 +1,6 @@
 # QueryRoutes
 
-{% swagger baseUrl="https://api.lnpay.co" path="/v1/node/default/payments/queryroutes" method="get" summary="Get QueryRoutes" %}
+{% swagger baseUrl="https://<yourdomain>" path="/v1/node/default/payments/queryroutes" method="get" summary="Get QueryRoutes" %}
 {% swagger-description %}
 This endpoint allows you to probe a route to see the fee and if the destination pubkey is reachable
 {% endswagger-description %}
@@ -66,7 +66,7 @@ amount in sats
 {% tab title="cURL" %}
 ```
 curl -u sak_XXXX: \
-"https://api.lnpay.co/v1/node/default/payments/queryroutes?pub_key=02c16cca44562b590dd279c942200bdccfd4f990c3a69fad620c10ef2f8228eaff&amt=10"
+"https://<yourdomain>/v1/node/default/payments/queryroutes?pub_key=02c16cca44562b590dd279c942200bdccfd4f990c3a69fad620c10ef2f8228eaff&amt=10"
 ```
 {% endtab %}
 {% endtabs %}

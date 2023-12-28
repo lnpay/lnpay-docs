@@ -14,9 +14,9 @@ Login to [https://lnpay.co](https://lnpay.co) and your API Key can be found here
 
 {% tabs %}
 {% tab title="curl" %}
-```text
+```
 $ curl -H "X-Api-Key: sak_XXXXXXX" \
-https://api.lnpay.co/v1/wallets
+https://<yourdomain>/v1/wallets
 ```
 {% endtab %}
 {% endtabs %}
@@ -27,8 +27,8 @@ You can authenticate by passing the parameter `access-token` in the URL as a que
 
 {% tabs %}
 {% tab title="curl" %}
-```text
-$ curl https://lnpay.co/v1/wallets?access-token=sak_XXXXXXX
+```
+$ curl https://<yourdomain>/v1/wallets?access-token=sak_XXXXXXX
 ```
 {% endtab %}
 {% endtabs %}
@@ -39,20 +39,18 @@ Basic authentication is also supported
 
 {% tabs %}
 {% tab title="curl" %}
-```text
+```
 # NOTE: the colon below prevents curl from asking for password
 
 $ curl -u sak_XXXXXXX: \
-https://lnpay.co/v1/wallets
+https://<yourdomain>/v1/wallets
 
 
 # NOTE: you must base64 encode sak_XXXXXXX: when using raw authentication header
 
 $ curl -H 'Authorization: Basic cGFrX08waVVNeGs4a0tfcVV6a1Q0WUtGdnAxWnNVdHA6' \
-https://lnpay.co/v1/wallets
+https://<yourdomain>/v1/wallets
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

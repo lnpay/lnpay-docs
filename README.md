@@ -28,7 +28,7 @@ pip install lnpay-py
 {% tab title="Go" %}
 [https://github.com/lnpay/lnpay-go](https://github.com/lnpay/lnpay-go)
 
-```text
+```
 go get github.com/lnpay/lnpay-go
 ```
 {% endtab %}
@@ -36,7 +36,7 @@ go get github.com/lnpay/lnpay-go
 {% tab title="PHP" %}
 [https://github.com/lnpay/lnpay-php](https://github.com/lnpay/lnpay-php)
 
-```text
+```
 composer require lnpay/lnpay-php
 ```
 {% endtab %}
@@ -111,5 +111,4 @@ LNPay.Initialize('pak_XXXXXXX');
 
 ## Postman Collection
 
-#### [https://www.getpostman.com/collections/fc4f2351a12b3446841c](https://www.getpostman.com/collections/fc4f2351a12b3446841c)
-
+#### [https://documenter.getpostman.com/view/19135652/UVkpQGAe](https://documenter.getpostman.com/view/19135652/UVkpQGAe)

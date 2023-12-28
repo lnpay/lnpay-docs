@@ -7,18 +7,14 @@ description: >-
 
 # Generate Invoice
 
-{% swagger baseUrl="https://api.lnpay.co/" path="v1/wallet/:wallet_key/invoice" method="post" summary="PostWalletInvoice" %}
+{% swagger baseUrl="https://<yourdomain>/" path="v1/wallet/:wallet_key/invoice" method="post" summary="PostWalletInvoice" %}
 {% swagger-description %}
 Creating an invoice returns the LNPay representation of a BOLT11 invoice - the LnTx object
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="wallet_key" type="string" %}
-wal_ for server side
-
-\
-
-
-waki_ for client side
+wal\_ for server side\
+waki\_ for client side
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="passThru" type="object" %}
@@ -83,7 +79,7 @@ curl -u sak_XXXXXXX: \
 -H "Content-Type: application/json" \
 -X POST \
 -d '{"num_satoshis":5, "memo":"Test invoice from the docs","passThru":" {\"ticketId\":\"556\"} "}' \
-https://api.lnpay.co/v1/wallet/wal_XXXX/invoice
+https://<yourdomain>/v1/wallet/wal_XXXX/invoice
 ```
 {% endtab %}
 

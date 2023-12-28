@@ -4,18 +4,14 @@ description: Get transactions for a particular wallet
 
 # List Wallet Transactions
 
-{% swagger baseUrl="https://api.lnpay.co/" path="v1/wallet/:wallet_key/transactions" method="get" summary="ListWalletTransactions" %}
+{% swagger baseUrl="https://<yourdomain>/" path="v1/wallet/:wallet_key/transactions" method="get" summary="ListWalletTransactions" %}
 {% swagger-description %}
 
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="wallet_key" type="string" %}
-wal_ for server side
-
-\
-
-
-waka_ for client side
+wal\_ for server side\
+waka\_ for client side
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="Array of transactions successfully retrieved, sorted by time created descending" %}
@@ -144,7 +140,7 @@ the `lntx` field will be `null` if the transaction is a transfer
 {% tab title="cURL" %}
 ```
 curl -u sak_XXXXXXX: \
-https://api.lnpay.co/v1/wallet/wal_XXXXXXX/transactions
+https://<yourdomain>/v1/wallet/wal_XXXXXXX/transactions
 ```
 {% endtab %}
 

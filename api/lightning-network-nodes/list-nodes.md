@@ -1,6 +1,6 @@
 # List Nodes
 
-{% swagger method="get" path="v1/nodes" baseUrl="https://api.lnpay.co/" summary="List Lightning Nodes tied to this account" %}
+{% swagger method="get" path="v1/nodes" baseUrl="https://<yourdomain>/" summary="List Lightning Nodes tied to this account" %}
 {% swagger-description %}
 
 {% endswagger-description %}
